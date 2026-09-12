@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Self Publishing Australia | Australian Self Publishers</title>
+    <title>Australian Book Publishers | Self Publishing Australia</title>
     <meta name="description" content="Professional self publishing services Australia-wide. Get transparent guidance, editing, design, formatting, ISBN and distribution support while retaining control of your book.">
     <meta name="theme-color" content="#002B5C">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <script>
@@ -39,7 +39,7 @@
             --muted: #78848F;
             --line: #E5E9EE;
             --line-dark: rgba(255, 255, 255, .14);
-            --serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+            --serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             --wrap: 1280px;
             --gutter: clamp(20px, 4vw, 44px);
@@ -108,9 +108,10 @@
         h3,
         h4 {
             font-family: var(--serif);
-            font-weight: 400;
+            font-weight: 700;
             color: var(--blue);
-            margin: 0
+            margin: 0;
+            letter-spacing: -0.02em;
         }
         
         p {
@@ -201,14 +202,12 @@
    ============================================================ */
         
         .h2 {
-            font-size: clamp(40px, 3.7vw, 3.05rem);
-            line-height: 1.13;
-            letter-spacing: -.012em;
+            font-size: clamp(34px, 3.4vw, 2.7rem);
+            line-height: 1.18;
+            letter-spacing: -.025em;
+            font-weight: 700;
             margin: 0 0 26px;
         }
-        /* .h2--wide {
-            max-width: 26ch
-        } */
         
         .accent {
             color: var(--red)
@@ -256,19 +255,21 @@
         
         .display-line {
             font-family: var(--serif);
-            font-size: clamp(1.5rem, 2.5vw, 2.05rem);
-            line-height: 1.28;
+            font-weight: 600;
+            font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+            line-height: 1.35;
             color: var(--bright);
-            letter-spacing: -.01em;
+            letter-spacing: -.015em;
             margin: 0 0 30px;
-            max-width: 22ch;
+            max-width: 26ch;
         }
         
         .statement {
             font-family: var(--serif);
-            font-size: clamp(2rem, 5vw, 4rem);
-            line-height: 1.1;
-            letter-spacing: -.02em;
+            font-size: clamp(1.9rem, 4.6vw, 3.6rem);
+            line-height: 1.12;
+            letter-spacing: -.025em;
+            font-weight: 700;
             color: #fff;
             margin: 0 auto 30px;
             max-width: none;
@@ -276,6 +277,8 @@
         
         .statement em {
             font-style: normal;
+            font-weight: 400;
+            color: rgba(255, 255, 255, .78);
         }
         
         .rule-red {
@@ -531,7 +534,8 @@
             display: block;
             padding: 18px 0;
             font-family: var(--serif);
-            font-size: 1.45rem;
+            font-weight: 700;
+            font-size: 1.25rem;
             color: var(--blue);
         }
         
@@ -567,24 +571,35 @@
         }
         
         .hero-copy {
-            max-width: 640px
+            max-width: 660px
         }
         
         .hero h1 {
-            font-size: clamp(2.5rem, 5.4vw, 4.35rem);
-            line-height: 1.04;
-            letter-spacing: -.025em;
-            margin: 0 0 22px;
+            font-size: clamp(2.4rem, 5vw, 3.9rem);
+            line-height: 1.08;
+            letter-spacing: -.03em;
+            font-weight: 800;
+            margin: 0 0 24px;
+        }
+        
+        .hero h1 .hero-line {
+            display: block;
+        }
+        
+        .hero h1 .hero-line em {
+            font-style: normal;
+            color: var(--red);
         }
         
         .hero-sub {
-            font-family: var(--serif);
-            font-style: italic;
-            font-size: clamp(1.12rem, 1.75vw, 1.48rem);
-            line-height: 1.45;
+            font-family: var(--sans);
+            font-style: normal;
+            font-weight: 500;
+            font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+            line-height: 1.5;
             color: var(--bright);
             margin: 0 0 28px;
-            max-width: 24ch;
+            max-width: 30ch;
         }
         
         .hero-copy p.lede {
@@ -786,11 +801,12 @@
             margin-top: 16px;
             padding-left: 16px;
             border-left: 2px solid var(--red);
-            font-family: var(--serif);
-            font-size: .95rem;
+            font-family: var(--sans);
+            font-style: normal;
+            font-weight: 500;
+            font-size: .875rem;
             color: var(--muted);
-            font-style: italic;
-            line-height: 1.5;
+            line-height: 1.55;
         }
         /* ============================================================
    9. EDITORIAL STATEMENT (CENTERED)
@@ -863,7 +879,6 @@
         }
         
         .sec-head__intro {
-            /* max-width: 60ch; */
             margin-bottom: 6px
         }
         /* ============================================================
@@ -922,9 +937,11 @@
         }
         
         .svc-num {
-            font-family: var(--serif);
-            font-size: 1.35rem;
+            font-family: var(--sans);
+            font-size: 1.05rem;
+            font-weight: 800;
             line-height: 1;
+            letter-spacing: .02em;
             color: rgba(255, 255, 255, .4);
             transition: color .35s var(--ease);
         }
@@ -934,10 +951,11 @@
         }
         
         .svc-title {
-            font-size: clamp(1.18rem, 1.7vw, 1.42rem);
-            line-height: 1.28;
+            font-size: clamp(1.12rem, 1.6vw, 1.32rem);
+            line-height: 1.32;
             margin: 0 0 12px;
-            letter-spacing: -.005em;
+            letter-spacing: -.015em;
+            font-weight: 700;
             color: #fff;
         }
         
@@ -1077,12 +1095,13 @@
         }
         
         .red-sec h2 {
-            font-size: clamp(1.9rem, 4.1vw, 3.2rem);
-            line-height: 1.12;
-            letter-spacing: -.018em;
+            font-size: clamp(1.75rem, 3.8vw, 2.9rem);
+            line-height: 1.15;
+            letter-spacing: -.025em;
+            font-weight: 700;
             color: #fff;
             margin: 0 0 22px;
-            max-width: 18ch;
+            max-width: 20ch;
         }
         
         .red-sec p {
@@ -1168,9 +1187,10 @@
         
         .process-statement {
             font-family: var(--serif);
-            font-size: clamp(40px, 3.9vw, 3.05rem);
-            line-height: 1.12;
-            letter-spacing: -.018em;
+            font-size: clamp(34px, 3.6vw, 2.8rem);
+            line-height: 1.18;
+            letter-spacing: -.025em;
+            font-weight: 700;
             color: #fff;
             margin: 0;
             max-width: none;
@@ -1194,8 +1214,6 @@
         }
         
         .process-step:hover {
-            /* background: var(--deep-red);
-            border-color: var(--deep-red); */
             background: white;
             transform: translateY(-6px);
             box-shadow: 0 34px 60px -34px rgba(0, 0, 0, .6);
@@ -1221,8 +1239,10 @@
         
         .process-num {
             display: block;
-            font-family: var(--serif);
-            font-size: 1.05rem;
+            font-family: var(--sans);
+            font-weight: 800;
+            font-size: .95rem;
+            letter-spacing: .02em;
             color: rgba(255, 255, 255, .6);
             margin-bottom: 8px;
             line-height: 1;
@@ -1460,11 +1480,12 @@
             margin-top: 16px;
             padding-left: 16px;
             border-left: 2px solid #fff;
-            font-family: var(--serif);
-            font-size: .95rem;
+            font-family: var(--sans);
+            font-style: normal;
+            font-weight: 500;
+            font-size: .875rem;
             color: rgba(255, 255, 255, .95);
-            font-style: italic;
-            line-height: 1.5;
+            line-height: 1.55;
         }
         
         .trust-checklist {
@@ -1560,9 +1581,11 @@
         }
         
         .faq-q h3 {
-            font-size: clamp(1.06rem, 1.55vw, 1.3rem);
-            line-height: 1.4;
+            font-size: clamp(1rem, 1.45vw, 1.2rem);
+            line-height: 1.45;
             margin: 0;
+            font-weight: 700;
+            letter-spacing: -.01em;
             color: var(--blue);
             transition: color .25s var(--ease);
             max-width: 60ch;
@@ -1679,11 +1702,12 @@
         
         .final-sec h2 {
             color: #fff;
-            font-size: clamp(1.95rem, 4.2vw, 3.35rem);
-            line-height: 1.1;
-            letter-spacing: -.02em;
+            font-size: clamp(1.8rem, 3.9vw, 3rem);
+            line-height: 1.14;
+            letter-spacing: -.025em;
+            font-weight: 700;
             margin: 0 0 24px;
-            max-width: 18ch;
+            max-width: 20ch;
         }
         
         .final-sec h2 .accent {
@@ -2178,16 +2202,25 @@
         
         @media (max-width:520px) {
             .hero h1 {
-                font-size: 40px
+                font-size: 32px
             }
             .hero-sub {
                 max-width: 100%;
             }
             .statement {
-                font-size: 40px
+                font-size: 32px
             }
             .red-sec h2 {
-                font-size: 40px;
+                font-size: 32px;
+            }
+            .final-sec h2 {
+                font-size: 30px;
+            }
+            .process-statement {
+                font-size: 28px;
+            }
+            .h2 {
+                font-size: 30px;
             }
             .hero-features {
                 grid-template-columns: 1fr
@@ -2239,8 +2272,8 @@
      ========================================================== -->
     <header class="site-header" id="siteHeader">
         <div class="wrap header-inner">
-            <a class="brand" href="#home" aria-label="Australian Self Publishers — home">
-                <img class="brand-logo" src="images/logo.png" alt="Australian Self Publishers">
+            <a class="brand" href="#home" aria-label="Australian Book Publishers — home">
+                <img class="brand-logo" src="images/logo.png" alt="Australian Book Publishers">
             </a>
 
             <nav class="nav-desktop" aria-label="Primary">
@@ -2292,9 +2325,12 @@
         <section class="hero" id="home">
             <div class="wrap hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow">Australian Self-Publishing</p>
-                    <h1>Self Publishing <span class="accent">Australia</span></h1>
-                    <p class="hero-sub">Publish on your terms, with people who actually know the process.</p>
+                    <p class="eyebrow">Australian Book Publishers</p>
+                    <h1>
+                        <span class="hero-line">Your Book.</span>
+                        <span class="hero-line">Your Story.</span>
+                        <span class="hero-line"><em>Your Publishing Journey.</em></span>
+                    </h1>
 
                     <p class="lede">Finishing your manuscript is a big deal. What happens next shouldn't feel like a maze. We work with authors across Australia to take books from a finished draft to a real, published title — without the vague promises and confusing
                         packages you'll find elsewhere.</p>
@@ -2313,7 +2349,7 @@
                         <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80" alt="An Australian author reviewing a printed book alongside manuscript pages at a desk" fetchpriority="high" decoding="async" width="1200" height="1500">
                     </figure>
 
-                    <div class="hero-label">From manuscript to published book</div>
+                    <!-- <div class="hero-label">From manuscript to published book</div> -->
                 </div>
             </div>
 
@@ -2346,8 +2382,7 @@
             <div class="wrap who-grid">
                 <div class="who-copy reveal">
                     <p class="eyebrow">About Us</p>
-                    <h2 class="h2">Who We Are — Australian Self Publishers</h2>
-                    <p class="display-line">Publishing support built around the author.</p>
+                    <h2 class="h2">Who We Are</h2>
 
                     <p>We started this because too many Australian authors were being talked into things they didn't understand. Vanity presses, hidden fees, contracts that quietly took their rights. Our approach is simpler: figure out what your book actually
                         needs, tell you what it costs, and let you decide.</p>
@@ -2391,7 +2426,7 @@
                 <div class="sec-head">
                     <div class="reveal">
                         <p class="eyebrow">Services</p>
-                        <h2 class="h2">Our Self Publishing <span class="accent">Services</span></h2>
+                        <h2 class="h2">Our <span class="accent">Services</span></h2>
                     </div>
                     <p class="sec-head__intro lede reveal" data-delay="1">Everything you need to get a finished manuscript into readers' hands — editing, design, formatting, ISBNs, distribution. You stay in charge of the decisions. We handle the work behind them.</p>
                 </div>
@@ -2459,19 +2494,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- ==========================================================
-       SERVICE IMAGE PANEL
-       ========================================================== -->
-        <!-- <section class="svc-panel">
-            <div class="wrap">
-                <figure class="panel-media frame reveal" style="margin:0">
-                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1800&q=80" alt="An editorial publishing desk with a printed book, manuscript pages, editing notes, a laptop and design materials" loading="lazy" decoding="async"
-                        width="1800" height="720">
-                    <figcaption class="panel-label">Professional publishing, thoughtfully delivered.</figcaption>
-                </figure>
-            </div>
-        </section> -->
 
         <!-- ==========================================================
        AUTHOR SUPPORT — LEFT TEXT / RIGHT IMAGE
@@ -2626,7 +2648,7 @@
             <div class="wrap">
                 <div class="trust-head reveal">
                     <p class="eyebrow eyebrow--light">Why Authors Work With Us</p>
-                    <h2 class="h2 h2--wide">Why Choose Australian Self Publishers?</h2>
+                    <h2 class="h2 h2--wide">Why Choose Australian Book Publishers?</h2>
                     <p class="lede">Picking a publishing partner is a real decision. Before you hand over a manuscript and your money, you should know who you're dealing with, what you're getting, and what happens to your rights.</p>
                 </div>
 
@@ -2721,7 +2743,7 @@
 
                     <div class="faq-item">
                         <button class="faq-q" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
-            <h3>What makes Australian Self Publishers different from other self publishing companies?</h3>
+            <h3>What makes Australian Book Publishers different from other self publishing companies?</h3>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
                         <div class="faq-a" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
@@ -2892,7 +2914,7 @@
             <div class="footer-top">
 
                 <div class="footer-brand">
-                    <img src="images/logo.png" alt="Australian Self Publishers">
+                    <img src="images/logo.png" alt="Australian Book Publishers">
                     <p>Transparent self-publishing support for Australian authors.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
@@ -2946,7 +2968,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Australian Self Publishers. All rights reserved.</p>
+                <p>&copy; 2026 Australian Book Publishers. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms &amp; Conditions</a>
