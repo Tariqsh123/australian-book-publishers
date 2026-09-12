@@ -205,12 +205,10 @@
             line-height: 1.13;
             letter-spacing: -.012em;
             margin: 0 0 26px;
-            max-width: 20ch;
         }
-        
-        .h2--wide {
+        /* .h2--wide {
             max-width: 26ch
-        }
+        } */
         
         .accent {
             color: var(--red)
@@ -853,10 +851,10 @@
    ============================================================ */
         
         .sec-head {
-            display: grid;
-            grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
-            gap: clamp(24px, 5vw, 70px);
-            align-items: end;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
             margin-bottom: clamp(40px, 5vw, 62px);
         }
         
@@ -865,7 +863,7 @@
         }
         
         .sec-head__intro {
-            max-width: 60ch;
+            /* max-width: 60ch; */
             margin-bottom: 6px
         }
         /* ============================================================
@@ -2283,7 +2281,7 @@
         <div class="m-cta">
             <a href="#contact" class="btn btn--primary">Get Your Free Manuscript Assessment</a>
         </div>
-        <p class="m-note">No pressure. Clear guidance. Your publishing journey stays yours.</p>
+        <p class="m-note">No pressure. Straight answers. Your book stays yours.</p>
     </div>
 
     <main id="main">
@@ -2296,18 +2294,18 @@
                 <div class="hero-copy">
                     <p class="eyebrow">Australian Self-Publishing</p>
                     <h1>Self Publishing <span class="accent">Australia</span></h1>
-                    <p class="hero-sub">Publish your book with clarity, control and professional support.</p>
+                    <p class="hero-sub">Publish on your terms, with people who actually know the process.</p>
 
-                    <p class="lede">Finishing your manuscript is a major achievement. Choosing what happens next should feel just as rewarding — not confusing or pressured. At Australian Self Publishers, we help authors across Australia move from finished manuscript
-                        to professionally published book with practical guidance, transparent communication and genuine publishing support.</p>
-                    <p class="lede">Whether you are preparing your first book or already working as an independent author, our team can help with the important stages of publishing — from editing and proofreading through formatting, cover design, ISBN setup and distribution.</p>
+                    <p class="lede">Finishing your manuscript is a big deal. What happens next shouldn't feel like a maze. We work with authors across Australia to take books from a finished draft to a real, published title — without the vague promises and confusing
+                        packages you'll find elsewhere.</p>
+                    <p class="lede">Whether it's your first book or your fifth, we handle the parts most authors would rather not do alone: editing, proofreading, formatting, cover design, ISBNs, and getting your book listed where readers can actually buy it.</p>
 
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn--primary">Get Your Free Manuscript Assessment</a>
                         <a href="#services" class="link-arrow">Explore Our Services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
 
-                    <p class="hero-note">No pressure. Clear guidance. Your publishing journey stays yours.</p>
+                    <p class="hero-note">No pressure. Straight answers. Your book stays yours.</p>
                 </div>
 
                 <div class="hero-media">
@@ -2351,12 +2349,11 @@
                     <h2 class="h2">Who We Are — Australian Self Publishers</h2>
                     <p class="display-line">Publishing support built around the author.</p>
 
-                    <p>Australian Self Publishers exists to make self-publishing clearer, more professional and more author-focused. We work with Australian writers who want to take control of their publishing journey without having to figure out every technical
-                        and production decision alone.</p>
-                    <p>We believe authors should understand what they are paying for, know what happens next and remain involved in the decisions that shape their books. That means practical communication, clear project expectations and support from real
-                        publishing professionals.</p>
-                    <p>As a Self Publishing Company for Australian Authors, our role is not simply to process a manuscript. We help you understand the publishing pathway and provide the professional services needed to prepare your book for readers.</p>
-                    <p>Our approach is particularly suited to independent authors who value ownership, clarity and a genuine working relationship.</p>
+                    <p>We started this because too many Australian authors were being talked into things they didn't understand. Vanity presses, hidden fees, contracts that quietly took their rights. Our approach is simpler: figure out what your book actually
+                        needs, tell you what it costs, and let you decide.</p>
+                    <p>You'll know who's working on your book, what stage it's at, and what happens next. No account managers reading from a script. No surprise charges on the invoice.</p>
+                    <p>We're not a manuscript mill. We're editors, designers and publishing people who take on a limited number of books at a time, and we treat each one like it matters — because to the author, it does.</p>
+                    <p>If you value keeping control of your work and knowing exactly what you're paying for, you'll probably get along with how we do things.</p>
 
                     <ul class="who-chips">
                         <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Author ownership</li>
@@ -2382,7 +2379,7 @@
             <div class="wrap statement-inner">
                 <hr class="rule-red">
                 <p class="statement">Your book is personal.<br><em>The publishing process shouldn't be.</em></p>
-                <p class="statement-sub">From the first manuscript review to the final publishing steps, we focus on making each stage easier to understand — so you always know where your book is heading.</p>
+                <p class="statement-sub">From the first read-through to the day your book goes live, we keep things simple. You'll always know where your book is and what's happening next.</p>
             </div>
         </section>
 
@@ -2396,8 +2393,7 @@
                         <p class="eyebrow">Services</p>
                         <h2 class="h2">Our Self Publishing <span class="accent">Services</span></h2>
                     </div>
-                    <p class="sec-head__intro lede reveal" data-delay="1">Our Self Publishing Services Australia are designed to support the practical journey from manuscript to finished book. With an Assisted Self Publishing Australia approach, we provide professional expertise while keeping you involved
-                        in the decisions that matter.</p>
+                    <p class="sec-head__intro lede reveal" data-delay="1">Everything you need to get a finished manuscript into readers' hands — editing, design, formatting, ISBNs, distribution. You stay in charge of the decisions. We handle the work behind them.</p>
                 </div>
 
                 <div class="svc-grid">
@@ -2407,7 +2403,7 @@
                             <span class="svc-num">01</span>
                         </div>
                         <h3 class="svc-title">Manuscript Editing</h3>
-                        <p class="svc-desc">Professional editing and proofreading to improve clarity, consistency, structure and readability while respecting the author's voice.</p>
+                        <p class="svc-desc">Structural edits, line edits, copyedits and proofreading — matched to what your manuscript actually needs, not what a package says you should buy. Your voice stays yours.</p>
                         <a class="svc-link" href="#contact">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </article>
 
@@ -2417,7 +2413,7 @@
                             <span class="svc-num">02</span>
                         </div>
                         <h3 class="svc-title">Book Formatting</h3>
-                        <p class="svc-desc">Professional interior formatting prepared for your selected print and digital formats, with careful attention to typography, spacing and consistency.</p>
+                        <p class="svc-desc">Print and ebook interior files that look right on the page and read cleanly on a screen. Set up properly for KDP, IngramSpark and other platforms.</p>
                         <a class="svc-link" href="#contact">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </article>
 
@@ -2427,7 +2423,7 @@
                             <span class="svc-num">03</span>
                         </div>
                         <h3 class="svc-title">Cover Design</h3>
-                        <p class="svc-desc">A professionally considered cover that reflects your book's genre, subject and intended audience while giving it a polished market-ready appearance.</p>
+                        <p class="svc-desc">A cover that fits your genre and looks like it belongs on a bookstore shelf. Designed by people who've done this before — not a stock template with your title dropped in.</p>
                         <a class="svc-link" href="#contact">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </article>
 
@@ -2437,7 +2433,7 @@
                             <span class="svc-num">04</span>
                         </div>
                         <h3 class="svc-title">ISBN &amp; Publishing Setup</h3>
-                        <p class="svc-desc">Practical guidance through ISBN requirements and the publishing preparation steps needed before your book reaches distribution.</p>
+                        <p class="svc-desc">We sort out ISBNs, barcodes, metadata and the technical setup. If you've never done this before, we'll walk you through it in plain English.</p>
                         <a class="svc-link" href="#contact">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </article>
 
@@ -2447,7 +2443,7 @@
                             <span class="svc-num">05</span>
                         </div>
                         <h3 class="svc-title">Distribution</h3>
-                        <p class="svc-desc">Support with making your book available through appropriate publishing and print-on-demand channels, including platforms such as Amazon KDP and IngramSpark where relevant.</p>
+                        <p class="svc-desc">Getting your book listed where readers can buy it — Amazon, IngramSpark and other channels that make sense for your title. Print-on-demand means no boxes stacked in the garage.</p>
                         <a class="svc-link" href="#contact">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </article>
 
@@ -2457,7 +2453,7 @@
                             <span class="svc-num">06</span>
                         </div>
                         <h3 class="svc-title">Publishing Guidance</h3>
-                        <p class="svc-desc">Clear, practical support throughout the process so you know what needs to happen, what decisions are yours and what to expect at each stage.</p>
+                        <p class="svc-desc">The straight answers most authors can't get anywhere else. What you actually need, what you don't, and what it should cost — explained as we go.</p>
                         <a class="svc-link" href="#contact">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </article>
                 </div>
@@ -2485,10 +2481,11 @@
                 <div class="support-copy reveal">
                     <p class="eyebrow">Author Support</p>
                     <h2 class="h2 h2--wide">Self Publishing Support for New and Experienced Authors</h2>
-                    <p>Self-publishing can be exciting, but it can also feel complicated when you are unfamiliar with editing, formatting, ISBNs, distribution or production requirements. Our role is to make those decisions easier to understand.</p>
-                    <p>For first-time authors, we provide Self Publishing Guidance Australia that explains the journey without unnecessary jargon. For experienced independent authors, we provide dependable production and publishing support when you need
-                        specialist help with the next stage of your project.</p>
-                    <p>Our Self Published Author Support Australia is built around communication. You remain involved in the decisions that shape your book, while our team helps you understand the professional work required behind them.</p>
+                    <p>Self-publishing is a lot of moving parts. Editing, formatting, ISBNs, distribution, print files — none of it is hard on its own, but it adds up fast. We make each step make sense.</p>
+                    <p>If you're publishing your first book, we'll explain the process without jargon and won't make you feel silly for asking questions. If you've done this before, we're the production team you call when you need specialists for the next
+                        stage.
+                    </p>
+                    <p>You'll hear from us regularly, and you'll always know where your project stands. Nothing happens to your book without you knowing about it.</p>
 
                     <a href="#contact" class="link-arrow">Talk to Our Publishing Team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
@@ -2506,7 +2503,7 @@
             <div class="wrap red-grid">
                 <div class="red-copy reveal">
                     <h2>Your story. Your decisions. Your book.</h2>
-                    <p>Professional support should give authors greater clarity — not less control. We keep every decision in your hands while our specialists handle the production work behind the scenes.</p>
+                    <p>Good support should leave you with more control, not less. You make the calls about your book. We do the work that gets it there.</p>
 
                     <div class="red-actions">
                         <a href="#contact" class="btn btn--white">Start Your Publishing Conversation</a>
@@ -2528,9 +2525,8 @@
                 <div class="aus-copy reveal">
                     <p class="eyebrow">Australia-Wide</p>
                     <h2 class="h2 h2--wide">Australia-Wide Self Publishing Services</h2>
-                    <p>Authors do not need to be in one particular city to access professional publishing support. We work with writers across Australia, including authors looking for self publishing Sydney support, self publishing Melbourne guidance, self
-                        publishing Brisbane services and publishing assistance in Perth. We also support authors searching for a self publishing company Adelaide writers can work with remotely, as well as authors in the Gold Coast and surrounding regions.
-                        Wherever you are based, our focus remains the same: clear communication, professional production and practical guidance throughout your publishing journey.</p>
+                    <p>We work with authors all over Australia — Sydney, Melbourne, Brisbane, Perth, Adelaide, the Gold Coast, and plenty of places in between. Everything can be done remotely, and it usually is. You'll get the same clear communication whether
+                        you're in the middle of a city or six hours out of one.</p>
 
                     <ul class="city-chips">
                         <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Sydney</li>
@@ -2563,31 +2559,31 @@
                         <span class="process-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
                         <span class="process-num">01</span>
                         <h3>Assess</h3>
-                        <p>We understand your manuscript and publishing goals.</p>
+                        <p>We read your manuscript and talk through what you want it to do.</p>
                     </li>
                     <li class="process-step reveal" data-delay="1">
                         <span class="process-icon"><i class="fa-solid fa-file-pen" aria-hidden="true"></i></span>
                         <span class="process-num">02</span>
                         <h3>Prepare</h3>
-                        <p>Editing, proofreading and preparation based on your project's needs.</p>
+                        <p>Editing and proofreading, sized to what your book actually needs.</p>
                     </li>
                     <li class="process-step reveal" data-delay="2">
                         <span class="process-icon"><i class="fa-solid fa-palette" aria-hidden="true"></i></span>
                         <span class="process-num">03</span>
                         <h3>Design</h3>
-                        <p>Cover and interior presentation developed professionally.</p>
+                        <p>Cover and interior layout — designed, not templated.</p>
                     </li>
                     <li class="process-step reveal" data-delay="3">
                         <span class="process-icon"><i class="fa-solid fa-upload" aria-hidden="true"></i></span>
                         <span class="process-num">04</span>
                         <h3>Publish</h3>
-                        <p>ISBN, distribution and publishing steps are handled with clear guidance.</p>
+                        <p>ISBN, metadata and distribution handled step by step.</p>
                     </li>
                     <li class="process-step reveal" data-delay="3">
                         <span class="process-icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></span>
                         <span class="process-num">05</span>
                         <h3>Release</h3>
-                        <p>Your book moves towards readers through the appropriate publishing channels.</p>
+                        <p>Your book goes live and readers can start buying it.</p>
                     </li>
                 </ol>
             </div>
@@ -2601,11 +2597,9 @@
                 <div class="pricing-copy reveal">
                     <p class="eyebrow">Pricing</p>
                     <h2 class="h2 h2--wide">How Much Does Self Publishing Cost in <span class="accent">Australia?</span></h2>
-                    <p>Self publishing costs vary because every book is different. The total investment can depend on manuscript length, editing requirements, book format, cover design, formatting, ISBN requirements, print specifications and distribution
-                        needs.
-                    </p>
-                    <p>Rather than presenting an arbitrary one-size-fits-all price, we look at what your project actually requires and explain the scope clearly.</p>
-                    <p>Our approach to Affordable Self Publishing Australia is based on transparency: you should understand what professional services are included before making a decision.</p>
+                    <p>What you'll pay depends on your book — how long it is, how much editing it needs, whether you want print, ebook or both. There's no honest one-size price.</p>
+                    <p>So instead of selling you a package padded with things you don't need, we look at your manuscript and tell you what it actually requires.</p>
+                    <p>You'll get a clear, itemised quote before you commit to anything. No hidden extras showing up later.</p>
                 </div>
 
                 <div class="reveal" data-delay="1">
@@ -2633,7 +2627,7 @@
                 <div class="trust-head reveal">
                     <p class="eyebrow eyebrow--light">Why Authors Work With Us</p>
                     <h2 class="h2 h2--wide">Why Choose Australian Self Publishers?</h2>
-                    <p class="lede">Choosing a publishing partner is about more than finding someone who can produce a book. You need to know who you are dealing with, what you are paying for and what happens to your rights and royalties.</p>
+                    <p class="lede">Picking a publishing partner is a real decision. Before you hand over a manuscript and your money, you should know who you're dealing with, what you're getting, and what happens to your rights.</p>
                 </div>
 
                 <div class="trust-layout">
@@ -2642,35 +2636,35 @@
                             <span class="tp-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
                             <div>
                                 <h3>Transparent Pricing</h3>
-                                <p>Clear communication about the services your project needs, without relying on confusing or unexplained packages.</p>
+                                <p>You'll see what's included and what it costs before you commit. No packages padded with things you don't need.</p>
                             </div>
                         </div>
                         <div class="trust-point reveal">
                             <span class="tp-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
                             <div>
                                 <h3>Your Rights Matter</h3>
-                                <p>You remain connected to the ownership and publishing decisions surrounding your work.</p>
+                                <p>Your book stays yours. You approve every major decision along the way.</p>
                             </div>
                         </div>
                         <div class="trust-point reveal">
                             <span class="tp-icon"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></span>
                             <div>
                                 <h3>Royalty Retention</h3>
-                                <p>Our assisted self-publishing model is designed around author control and retaining the royalties associated with your book.</p>
+                                <p>You keep the royalties from your book. Our assisted model is set up so authors get paid, not the other way around.</p>
                             </div>
                         </div>
                         <div class="trust-point reveal">
                             <span class="tp-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
                             <div>
                                 <h3>Real People</h3>
-                                <p>You work with real editors, designers and publishing professionals — not a generic call-centre experience.</p>
+                                <p>The people working on your book are editors, designers and publishing professionals — not account managers reading from a template.</p>
                             </div>
                         </div>
                         <div class="trust-point reveal">
                             <span class="tp-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
                             <div>
                                 <h3>Practical Guidance</h3>
-                                <p>We explain the publishing process in straightforward language so you can make informed decisions.</p>
+                                <p>We tell you how it is, in plain English — even when the answer isn't what you were hoping for.</p>
                             </div>
                         </div>
                     </div>
@@ -2707,7 +2701,7 @@
                         <p class="eyebrow">FAQs</p>
                         <h2 class="h2">Frequently Asked <span class="accent">Questions</span></h2>
                     </div>
-                    <p class="faq-intro lede reveal" data-delay="1">Clear answers to common questions about self-publishing, costs, rights, publishing support and choosing a publishing partner.</p>
+                    <p class="faq-intro lede reveal" data-delay="1">Straight answers to the questions authors actually ask about self-publishing, costs, rights and picking a publishing partner.</p>
                 </div>
 
                 <div class="faq-list" id="faqList">
@@ -2719,8 +2713,8 @@
           </button>
                         <div class="faq-a" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
                             <div class="faq-a-inner">
-                                <p>To self publish a book in Australia, you typically move through manuscript preparation, editing, proofreading, cover and interior design, ISBN setup, distribution and publication. Professional guidance can help you understand
-                                    each stage and prepare your book correctly.</p>
+                                <p>The short version: your manuscript gets edited and proofread, then formatted, then it gets a cover, an ISBN, and it's listed with distributors so readers can buy it. The order matters, and so does doing each step properly.
+                                    That's where most authors want help.</p>
                             </div>
                         </div>
                     </div>
@@ -2732,8 +2726,7 @@
           </button>
                         <div class="faq-a" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
                             <div class="faq-a-inner">
-                                <p>Australian Self Publishers focuses on transparent communication, author control, professional support and practical guidance. The model is designed for authors who want real editors and designers involved rather than a
-                                    generic call-centre experience.</p>
+                                <p>We explain everything up front, you keep control of your book, and you work with actual editors and designers instead of whoever picks up the phone. That's the whole thing.</p>
                             </div>
                         </div>
                     </div>
@@ -2745,7 +2738,7 @@
           </button>
                         <div class="faq-a" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3">
                             <div class="faq-a-inner">
-                                <p>Self-publishing costs vary depending on the manuscript, editing, design, formatting, format and distribution requirements. We assess what your project needs rather than presenting an invented one-size-fits-all price.</p>
+                                <p>It varies — mostly by length and how much editing your manuscript needs. Send us your book and we'll give you a real quote. We don't advertise fake prices to get you on the phone.</p>
                             </div>
                         </div>
                     </div>
@@ -2757,7 +2750,7 @@
           </button>
                         <div class="faq-a" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4">
                             <div class="faq-a-inner">
-                                <p>Support can include manuscript editing, proofreading, book formatting, cover design, ISBN and publishing setup, distribution assistance and practical guidance throughout the publishing process.</p>
+                                <p>Editing, proofreading, interior formatting, cover design, ISBN setup, distribution, and someone to answer your questions along the way. You only pay for what your book actually needs.</p>
                             </div>
                         </div>
                     </div>
@@ -2769,8 +2762,7 @@
           </button>
                         <div class="faq-a" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5">
                             <div class="faq-a-inner">
-                                <p>Yes. First-time authors can self publish successfully when they have clear information and professional support. We help explain the process, identify the important decisions and guide you through the practical stages of
-                                    preparing your book.</p>
+                                <p>Yes. Most of our authors are doing this for the first time. There's no such thing as a silly question, and we'd rather explain something twice than have you guess.</p>
                             </div>
                         </div>
                     </div>
@@ -2782,7 +2774,7 @@
           </button>
                         <div class="faq-a" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6">
                             <div class="faq-a-inner">
-                                <p>Yes. The assisted self-publishing model is positioned around author control, including retention of your rights and the royalties associated with your book, subject to the specific terms of your publishing arrangement.</p>
+                                <p>Yes. You retain the rights to your work and the royalties from sales, subject to the specifics of your arrangement — which we'll spell out in writing before you sign anything.</p>
                             </div>
                         </div>
                     </div>
@@ -2794,9 +2786,7 @@
           </button>
                         <div class="faq-a" id="faq-panel-7" role="region" aria-labelledby="faq-btn-7">
                             <div class="faq-a-inner">
-                                <p>Yes. Self publishing is a legitimate publishing pathway. It gives authors more control over the publishing process, while traditional publishing follows a different model involving publishers, selection processes and commercial
-                                    arrangements.
-                                </p>
+                                <p>Yes. Plenty of successful books are self-published. It's just a different path — you take on the cost and the decisions, and in return you keep the control and the royalties.</p>
                             </div>
                         </div>
                     </div>
@@ -2808,9 +2798,7 @@
           </button>
                         <div class="faq-a" id="faq-panel-8" role="region" aria-labelledby="faq-btn-8">
                             <div class="faq-a-inner">
-                                <p>Look for transparent pricing, clear contractual terms, identifiable business information, straightforward rights and royalty arrangements, genuine professional support and an absence of pressure tactics or unverifiable
-                                    promises.
-                                </p>
+                                <p>Watch for: pricing they won't put in writing, contracts you don't understand, no ABN or physical address, big promises with nothing behind them, and anyone who pressures you to sign on the call. Any of those is a red flag.</p>
                             </div>
                         </div>
                     </div>
@@ -2826,8 +2814,7 @@
             <div class="wrap final-grid">
                 <div class="final-copy reveal">
                     <h2>Ready to Self Publish Your Book in <span class="accent">Australia?</span></h2>
-                    <p>Your manuscript has already taken time, thought and commitment. The next step should feel clear, not confusing. Whether you are publishing your first book or developing your next project, Australian Self Publishers can help you understand
-                        what your book needs and move towards publication with professional support.</p>
+                    <p>You've already done the hard part. The next step should feel straightforward. Send us your manuscript and we'll take a look, tell you what it needs, and give you a clear quote — no obligation, no pressure, no sales script.</p>
 
                     <ul class="final-points">
                         <li><i class="fa-solid fa-check" aria-hidden="true"></i> Free manuscript assessment</li>
@@ -2835,7 +2822,7 @@
                         <li><i class="fa-solid fa-check" aria-hidden="true"></i> You keep your rights &amp; royalties</li>
                     </ul>
 
-                    <p class="final-note">Professional guidance for Australian authors.</p>
+                    <p class="final-note">Straight guidance for Australian authors.</p>
                 </div>
 
                 <div class="final-form-wrap reveal" data-delay="1">
@@ -2884,7 +2871,7 @@
 
                         <div class="form-row field">
                             <label for="details">Details</label>
-                            <textarea id="details" name="details" placeholder="Tell us a little about your book, word count and what you need help with."></textarea>
+                            <textarea id="details" name="details" placeholder="Tell us a bit about your book — word count, genre, and what you'd like help with."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn--primary">Submit Request</button>
@@ -2906,7 +2893,7 @@
 
                 <div class="footer-brand">
                     <img src="images/logo.png" alt="Australian Self Publishers">
-                    <p>Professional, transparent self-publishing support for Australian authors.</p>
+                    <p>Transparent self-publishing support for Australian authors.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
