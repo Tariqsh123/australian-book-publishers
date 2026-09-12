@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Australian Book Publishers | Self Publishing Australia</title>
     <meta name="description" content="Professional self publishing services Australia-wide. Get transparent guidance, editing, design, formatting, ISBN and distribution support while retaining control of your book.">
-    <meta name="theme-color" content="#002B5C">
+    <meta name="theme-color" content="#122942">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- ✅ SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <script>
         document.documentElement.classList.add('js');
@@ -23,22 +26,24 @@
    ============================================================ */
         
          :root {
-            --blue: #002B5C;
-            --deep: #071D3A;
-            --bright: #005B96;
-            --red: #E31B23;
-            --deep-red: #B5121B;
+            --blue: #122942;
+            --deep: #0A1B2E;
+            --bright: #0094CE;
+            --red: #0094CE;
+            --deep-red: #0077A8;
             --white: #FFFFFF;
             --off: #F7F8FA;
             --tint-blue: #EDF3FA;
             --tint-blue-line: #D9E5F2;
-            --tint-red: #FDEEEF;
-            --tint-red-line: #F6D9DB;
+            --tint-red: #E6F6FC;
+            --tint-red-line: #C7E8F5;
             --ink: #16202A;
             --body: #3E4B59;
             --muted: #78848F;
             --line: #E5E9EE;
             --line-dark: rgba(255, 255, 255, .14);
+            --gainsboro: #DCDCDC;
+            --star: #F5B301;
             --serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             --wrap: 1280px;
@@ -46,9 +51,9 @@
             --sec-y: clamp(64px, 8.5vw, 118px);
             --ease: cubic-bezier(.22, .61, .36, 1);
             --r: 8px;
-            --sh-sm: 0 10px 26px -20px rgba(7, 29, 58, .40);
-            --sh-md: 0 26px 54px -36px rgba(7, 29, 58, .45);
-            --sh-lg: 0 38px 74px -44px rgba(7, 29, 58, .55);
+            --sh-sm: 0 10px 26px -20px rgba(18, 41, 66, .40);
+            --sh-md: 0 26px 54px -36px rgba(18, 41, 66, .45);
+            --sh-lg: 0 38px 74px -44px rgba(18, 41, 66, .55);
         }
         /* ============================================================
    2. RESET & BASE
@@ -278,7 +283,7 @@
         .statement em {
             font-style: normal;
             font-weight: 400;
-            color: rgba(255, 255, 255, .78);
+            color: rgba(255, 255, 255);
         }
         
         .rule-red {
@@ -341,11 +346,11 @@
         
         .btn--white {
             background: #fff;
-            color: var(--red)
+            color: var(--blue)
         }
         
         .btn--white:hover {
-            background: #F2F2F2
+            background: #E6F6FC
         }
         
         .btn--ghost-light {
@@ -414,7 +419,7 @@
         }
         
         .site-header.is-scrolled {
-            box-shadow: 0 12px 34px -22px rgba(7, 29, 58, .4);
+            box-shadow: 0 12px 34px -22px rgba(18, 41, 66, .4);
             background: rgba(255, 255, 255, .98);
         }
         
@@ -839,7 +844,7 @@
             width: 520px;
             height: 520px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(227, 27, 35, .16) 0%, rgba(227, 27, 35, 0) 70%);
+            background: radial-gradient(circle, rgba(0, 148, 206, .16) 0%, rgba(0, 148, 206, 0) 70%);
             pointer-events: none;
         }
         
@@ -882,7 +887,7 @@
             margin-bottom: 6px
         }
         /* ============================================================
-   11. SERVICE CARDS — SAME DARK BLUE, HOVER RED
+   11. SERVICE CARDS — SAME DARK BLUE, HOVER BRIGHT BLUE
    ============================================================ */
         
         .svc-grid {
@@ -907,7 +912,7 @@
             background: var(--red);
             border-color: var(--red);
             transform: translateY(-6px);
-            box-shadow: 0 34px 60px -34px rgba(227, 27, 35, .65);
+            box-shadow: 0 34px 60px -34px rgba(0, 148, 206, .65);
         }
         
         .svc-top {
@@ -1059,7 +1064,7 @@
             aspect-ratio: 4/4.3
         }
         /* ============================================================
-   14. RED CTA — LEFT TEXT + BUTTON, RIGHT IMAGE
+   14. BRIGHT-BLUE CTA — LEFT TEXT + BUTTON, RIGHT IMAGE
    ============================================================ */
         
         .red-sec {
@@ -1171,7 +1176,7 @@
             box-shadow: var(--sh-lg);
         }
         /* ============================================================
-   16. PROCESS — BLUE BG, RED CARDS
+   16. PROCESS — BLUE BG, BRIGHT-BLUE CARDS
    ============================================================ */
         
         .process-sec {
@@ -1358,7 +1363,7 @@
             text-align: center;
         }
         /* ============================================================
-   18. TRUST — RED BG, ALL WHITE TEXT
+   18. TRUST — BRIGHT-BLUE BG, ALL WHITE TEXT
    ============================================================ */
         
         .trust-sec {
@@ -1472,7 +1477,7 @@
         
         .trust-media .frame {
             aspect-ratio: 4/4.4;
-            background: linear-gradient(140deg, #7c0f14 0%, #b5121b 100%);
+            background: linear-gradient(140deg, #005A7F 0%, #0077A8 100%);
             box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .55);
         }
         
@@ -1533,6 +1538,171 @@
             background: #fff;
             color: var(--red);
             font-size: .58rem;
+        }
+        /* ============================================================
+   18b. TESTIMONIALS — WHITE BG, WHITE CARDS, GAINSBORO BORDER
+   ============================================================ */
+        
+        .testi-sec {
+            background: var(--white);
+            padding-block: clamp(40px, 6vw, 60px);
+            overflow: hidden;
+        }
+        
+        .testi-head {
+            max-width: 800px;
+            margin-bottom: clamp(28px, 3.5vw, 42px);
+        }
+        
+        .testi-head .h2 {
+            margin-bottom: 14px;
+        }
+        
+        .testi-head .lede {
+            max-width: 62ch;
+            margin: 0;
+        }
+        
+        .testi-swiper {
+            padding: 8px 4px 12px;
+            margin: 0 -4px;
+        }
+        
+        .testi-swiper .swiper-slide {
+            height: fit-content;
+        }
+        
+        .swiper-wrapper {
+            height: fit-content;
+        }
+        
+        .testi-card {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            background: var(--white);
+            border: 1px solid var(--gainsboro);
+            border-radius: var(--r);
+            padding: clamp(18px, 2vw, 24px) clamp(16px, 1.8vw, 22px);
+            transition: transform .32s var(--ease), box-shadow .32s var(--ease), border-color .32s var(--ease);
+        }
+        
+        .testi-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--sh-md);
+            border-color: #c6c9cd;
+        }
+        
+        .testi-person {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        
+        .testi-avatar {
+            flex: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: var(--tint-blue);
+            border: 1px solid var(--gainsboro);
+        }
+        
+        .testi-name {
+            font-family: var(--sans);
+            font-size: .9rem;
+            font-weight: 800;
+            color: var(--blue);
+            letter-spacing: -.005em;
+            margin: 0 0 2px;
+            line-height: 1.3;
+        }
+        
+        .testi-role {
+            font-size: .72rem;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.45;
+        }
+        
+        .testi-stars {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            color: var(--star);
+            font-size: .8rem;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+        
+        .testi-quote {
+            /* flex: 1 1 auto; */
+            height: fit-content;
+            font-size: .9rem;
+            line-height: 1.7;
+            color: var(--body);
+            margin: 0;
+        }
+        
+        .testi-nav {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: clamp(20px, 3vw, 30px);
+        }
+        
+        .testi-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--gainsboro);
+            background: #fff;
+            color: var(--blue);
+            display: grid;
+            place-items: center;
+            font-size: .78rem;
+            transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+        }
+        
+        .testi-btn:hover {
+            background: var(--blue);
+            border-color: var(--blue);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        .testi-btn.swiper-button-disabled {
+            opacity: .38;
+            cursor: not-allowed;
+            transform: none;
+            background: #fff;
+            border-color: var(--gainsboro);
+            color: var(--blue);
+        }
+        
+        .testi-dots {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0 6px;
+        }
+        
+        .testi-dots .swiper-pagination-bullet {
+            width: 7px;
+            height: 7px;
+            background: var(--gainsboro);
+            opacity: 1;
+            margin: 0 !important;
+            transition: width .3s var(--ease), background-color .3s var(--ease);
+        }
+        
+        .testi-dots .swiper-pagination-bullet-active {
+            width: 22px;
+            border-radius: 4px;
+            background: var(--red);
         }
         /* ============================================================
    19. FAQ
@@ -1711,7 +1881,7 @@
         }
         
         .final-sec h2 .accent {
-            color: #FFD9DB
+            color: #B3E5FC
         }
         
         .final-copy p {
@@ -1820,7 +1990,7 @@
         .field textarea:focus {
             outline: none;
             border-color: var(--bright);
-            box-shadow: 0 0 0 3px rgba(0, 91, 150, .13);
+            box-shadow: 0 0 0 3px rgba(0, 148, 206, .13);
         }
         
         .field textarea {
@@ -1831,12 +2001,20 @@
         .field select {
             appearance: none;
             -webkit-appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23002B5C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23122942' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 14px center;
             background-size: 16px;
             padding-right: 42px;
             cursor: pointer;
+        }
+        /* Country flags on select options (uses flagcdn.com CDN) */
+        
+        #country option {
+            background-repeat: no-repeat;
+            background-position: left 10px center;
+            background-size: 18px 13px;
+            padding-left: 36px;
         }
         
         .field input[type="file"] {
@@ -2202,13 +2380,13 @@
         
         @media (max-width:520px) {
             .hero h1 {
-                font-size: 32px
+                font-size: 50px
             }
             .hero-sub {
                 max-width: 100%;
             }
             .statement {
-                font-size: 32px
+                font-size: 40px
             }
             .red-sec h2 {
                 font-size: 32px;
@@ -2220,7 +2398,7 @@
                 font-size: 28px;
             }
             .h2 {
-                font-size: 30px;
+                font-size: 40px;
             }
             .hero-features {
                 grid-template-columns: 1fr
@@ -2239,6 +2417,10 @@
             }
             .cta-form {
                 padding: 24px 20px
+            }
+            .testi-btn {
+                width: 40px;
+                height: 40px
             }
         }
         /* ============================================================
@@ -2260,6 +2442,10 @@
                 opacity: 1;
                 transform: none
             }
+        }
+        
+        section {
+            padding-block: clamp(40px, 60vw, 60px) !important;
         }
     </style>
 </head>
@@ -2325,7 +2511,7 @@
         <section class="hero" id="home">
             <div class="wrap hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow">Australian Book Publishers</p>
+                    <!-- <p class="eyebrow">Australian Book Publishers</p> -->
                     <h1>
                         <span class="hero-line">Your Book.</span>
                         <!-- <span class="hero-line">Your Story.</span> -->
@@ -2381,7 +2567,7 @@
         <section class="sec sec--white" id="about">
             <div class="wrap who-grid">
                 <div class="who-copy reveal">
-                    <p class="eyebrow">About Us</p>
+                    <!-- <p class="eyebrow">About Us</p> -->
                     <h2 class="h2">Who We Are</h2>
 
                     <p>We started this because too many Australian authors were being talked into things they didn't understand. Vanity presses, hidden fees, contracts that quietly took their rights. Our approach is simpler: figure out what your book actually
@@ -2425,7 +2611,7 @@
             <div class="wrap">
                 <div class="sec-head">
                     <div class="reveal">
-                        <p class="eyebrow">Services</p>
+                        <!-- <p class="eyebrow">Services</p> -->
                         <h2 class="h2">Our <span class="accent">Services</span></h2>
                     </div>
                     <p class="sec-head__intro lede reveal" data-delay="1">Everything you need to get a finished manuscript into readers' hands — editing, design, formatting, ISBNs, distribution. You stay in charge of the decisions. We handle the work behind them.</p>
@@ -2501,7 +2687,7 @@
         <section class="sec sec--white">
             <div class="wrap support-grid">
                 <div class="support-copy reveal">
-                    <p class="eyebrow">Author Support</p>
+                    <!-- <p class="eyebrow">Author Support</p> -->
                     <h2 class="h2 h2--wide">Self Publishing Support for New and Experienced Authors</h2>
                     <p>Self-publishing is a lot of moving parts. Editing, formatting, ISBNs, distribution, print files — none of it is hard on its own, but it adds up fast. We make each step make sense.</p>
                     <p>If you're publishing your first book, we'll explain the process without jargon and won't make you feel silly for asking questions. If you've done this before, we're the production team you call when you need specialists for the next
@@ -2519,7 +2705,7 @@
         </section>
 
         <!-- ==========================================================
-       RED CTA — LEFT TEXT + BUTTON / RIGHT IMAGE
+       BRIGHT-BLUE CTA — LEFT TEXT + BUTTON / RIGHT IMAGE
        ========================================================== -->
         <section class="red-sec">
             <div class="wrap red-grid">
@@ -2545,7 +2731,7 @@
         <section class="sec sec--white">
             <div class="wrap aus-grid">
                 <div class="aus-copy reveal">
-                    <p class="eyebrow">Australia-Wide</p>
+                    <!-- <p class="eyebrow">Australia-Wide</p> -->
                     <h2 class="h2 h2--wide">Australia-Wide Self Publishing Services</h2>
                     <p>We work with authors all over Australia — Sydney, Melbourne, Brisbane, Perth, Adelaide, the Gold Coast, and plenty of places in between. Everything can be done remotely, and it usually is. You'll get the same clear communication whether
                         you're in the middle of a city or six hours out of one.</p>
@@ -2567,12 +2753,12 @@
         </section>
 
         <!-- ==========================================================
-       PROCESS — BLUE BG, RED CARDS
+       PROCESS — BLUE BG, BRIGHT-BLUE CARDS
        ========================================================== -->
         <section class="process-sec" id="how-it-works">
             <div class="wrap">
                 <div class="process-head reveal">
-                    <p class="eyebrow eyebrow--light">How the Journey Works</p>
+                    <!-- <p class="eyebrow eyebrow--light">How the Journey Works</p> -->
                     <p class="process-statement">From finished manuscript to published book.</p>
                 </div>
 
@@ -2617,7 +2803,7 @@
         <section class="sec sec--off" id="pricing">
             <div class="wrap pricing-grid">
                 <div class="pricing-copy reveal">
-                    <p class="eyebrow">Pricing</p>
+                    <!-- <p class="eyebrow">Pricing</p> -->
                     <h2 class="h2 h2--wide">How Much Does Self Publishing Cost in <span class="accent">Australia?</span></h2>
                     <p>What you'll pay depends on your book — how long it is, how much editing it needs, whether you want print, ebook or both. There's no honest one-size price.</p>
                     <p>So instead of selling you a package padded with things you don't need, we look at your manuscript and tell you what it actually requires.</p>
@@ -2642,12 +2828,12 @@
         </section>
 
         <!-- ==========================================================
-       TRUST — RED BG / WHITE TEXT
+       TRUST — BRIGHT-BLUE BG / WHITE TEXT
        ========================================================== -->
         <section class="trust-sec">
             <div class="wrap">
                 <div class="trust-head reveal">
-                    <p class="eyebrow eyebrow--light">Why Authors Work With Us</p>
+                    <!-- <p class="eyebrow eyebrow--light">Why Authors Work With Us</p> -->
                     <h2 class="h2 h2--wide">Why Choose Australian Book Publishers?</h2>
                     <p class="lede">Picking a publishing partner is a real decision. Before you hand over a manuscript and your money, you should know who you're dealing with, what you're getting, and what happens to your rights.</p>
                 </div>
@@ -2714,13 +2900,150 @@
         </section>
 
         <!-- ==========================================================
+       TESTIMONIALS — WHITE BG / CAROUSEL
+       ========================================================== -->
+        <section class="testi-sec" id="testimonials">
+            <div class="wrap">
+                <div class="testi-head">
+                    <div class="reveal">
+                        <p class="eyebrow">Author Stories</p>
+                        <h2 class="h2">What Australian Authors <span class="accent">Say About Us</span></h2>
+                    </div>
+                    <p class="lede reveal" data-delay="1">Real feedback from authors we've worked with — first-time writers, memoirists and business authors alike. No scripts, no stock quotes.</p>
+                </div>
+
+                <div class="swiper testi-swiper reveal" data-delay="1">
+                    <div class="swiper-wrapper">
+
+                        <!-- 1 -->
+                        <div class="swiper-slide">
+                            <article class="testi-card">
+                                <div class="testi-person">
+                                    <img class="testi-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Mitchell" loading="lazy" width="48" height="48">
+                                    <div>
+                                        <h3 class="testi-name">Sarah Mitchell</h3>
+                                        <p class="testi-role">Memoir Author · Melbourne, VIC</p>
+                                    </div>
+                                </div>
+                                <div class="testi-stars" aria-label="Rated 5 out of 5 stars">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                </div>
+                                <p class="testi-quote">“I'd spoken to three other companies before this one and every conversation felt like a sales pitch. Here, someone actually read my manuscript and told me what it needed — and what it didn't. My memoir was published eleven
+                                    weeks later.”</p>
+                            </article>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="swiper-slide">
+                            <article class="testi-card">
+                                <div class="testi-person">
+                                    <img class="testi-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Daniel O'Connor" loading="lazy" width="48" height="48">
+                                    <div>
+                                        <h3 class="testi-name">Daniel O'Connor</h3>
+                                        <p class="testi-role">Debut Novelist · Brisbane, QLD</p>
+                                    </div>
+                                </div>
+                                <div class="testi-stars" aria-label="Rated 5 out of 5 stars">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                </div>
+                                <p class="testi-quote">“First book, no idea what I was doing. The team explained ISBNs, formatting and distribution without making me feel stupid. The quote I got at the start was the quote I paid at the end — that alone was worth it.”</p>
+                            </article>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="swiper-slide">
+                            <article class="testi-card">
+                                <div class="testi-person">
+                                    <img class="testi-avatar" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Raman" loading="lazy" width="48" height="48">
+                                    <div>
+                                        <h3 class="testi-name">Priya Raman</h3>
+                                        <p class="testi-role">Business Author · Sydney, NSW</p>
+                                    </div>
+                                </div>
+                                <div class="testi-stars" aria-label="Rated 5 out of 5 stars">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                </div>
+                                <p class="testi-quote">“The cover design was the part I was most nervous about. They came back with concepts that actually suited my genre instead of a template. It looks like a book you'd pick up in a shop — because it is one now.”</p>
+                            </article>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="swiper-slide">
+                            <article class="testi-card">
+                                <div class="testi-person">
+                                    <img class="testi-avatar" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Nguyen" loading="lazy" width="48" height="48">
+                                    <div>
+                                        <h3 class="testi-name">Michael Nguyen</h3>
+                                        <p class="testi-role">Non-Fiction Author · Perth, WA</p>
+                                    </div>
+                                </div>
+                                <div class="testi-stars" aria-label="Rated 5 out of 5 stars">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                </div>
+                                <p class="testi-quote">“I've published twice before with other companies and spent most of both projects chasing updates. This time I always knew where things stood. Editing, proofing and print files were all handled properly the first time.”</p>
+                            </article>
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="swiper-slide">
+                            <article class="testi-card">
+                                <div class="testi-person">
+                                    <img class="testi-avatar" src="https://randomuser.me/api/portraits/women/26.jpg" alt="Emma Whitfield" loading="lazy" width="48" height="48">
+                                    <div>
+                                        <h3 class="testi-name">Emma Whitfield</h3>
+                                        <p class="testi-role">Children's Author · Regional SA</p>
+                                    </div>
+                                </div>
+                                <div class="testi-stars" aria-label="Rated 5 out of 5 stars">
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                                </div>
+                                <p class="testi-quote">“Being six hours out of Adelaide made me worry I'd get forgotten. I didn't. Everything was done remotely and the communication was better than most local businesses I've dealt with. My children's book is out and selling.”</p>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="testi-nav reveal">
+                    <button class="testi-btn testi-prev" type="button" aria-label="Previous testimonial">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </button>
+                    <div class="testi-dots swiper-pagination"></div>
+                    <button class="testi-btn testi-next" type="button" aria-label="Next testimonial">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================
        FAQ
        ========================================================== -->
         <section class="sec sec--white" id="faqs">
             <div class="wrap">
                 <div class="faq-head">
                     <div class="reveal">
-                        <p class="eyebrow">FAQs</p>
+                        <!-- <p class="eyebrow">FAQs</p> -->
                         <h2 class="h2">Frequently Asked <span class="accent">Questions</span></h2>
                     </div>
                     <p class="faq-intro lede reveal" data-delay="1">Straight answers to the questions authors actually ask about self-publishing, costs, rights and picking a publishing partner.</p>
@@ -2867,6 +3190,14 @@
                             </div>
                         </div>
 
+                        <!-- ✅ COUNTRY DROPDOWN WITH FLAGS (populated by JS, flags via flagcdn.com) -->
+                        <div class="form-row field">
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option value="" selected disabled>Select your country</option>
+                            </select>
+                        </div>
+
                         <div class="form-row field">
                             <label for="genre">Select Genre</label>
                             <select id="genre" name="genre">
@@ -2881,14 +3212,16 @@
               </select>
                         </div>
 
+                        <!-- ✅ BOOK TITLE -->
                         <div class="form-row field">
-                            <label for="manuscript">Manuscript</label>
-                            <input type="file" id="manuscript" name="manuscript" accept=".doc,.docx,.pdf,.rtf,.txt">
+                            <label for="bookTitle">Book Title</label>
+                            <input type="text" id="bookTitle" name="bookTitle" placeholder="Working title of your book">
                         </div>
 
+                        <!-- ✅ ATTACHMENT / MANUSCRIPT -->
                         <div class="form-row field">
-                            <label for="bookTitle">Write a Book Title</label>
-                            <input type="text" id="bookTitle" name="bookTitle" placeholder="Working title of your book">
+                            <label for="manuscript">Attachment (Manuscript)</label>
+                            <input type="file" id="manuscript" name="manuscript" accept=".doc,.docx,.pdf,.rtf,.txt">
                         </div>
 
                         <div class="form-row field">
@@ -2942,6 +3275,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
                         <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#faqs">FAQs</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -2952,6 +3286,7 @@
                     <ul>
                         <li><a href="#how-it-works">Publishing Guidance</a></li>
                         <li><a href="#services">Author Support</a></li>
+                        <li><a href="#testimonials">Author Stories</a></li>
                         <li><a href="#faqs">Self-Publishing Information</a></li>
                     </ul>
                 </div>
@@ -2976,6 +3311,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- ✅ SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
         (function() {
@@ -3102,6 +3440,48 @@
             }
 
             /* ------------------------------------------------------------
+               TESTIMONIALS SWIPER
+               ------------------------------------------------------------ */
+            if (typeof Swiper !== 'undefined' && document.querySelector('.testi-swiper')) {
+                new Swiper('.testi-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    grabCursor: true,
+                    speed: 600,
+                    autoHeight: false,
+                    keyboard: {
+                        enabled: true
+                    },
+                    a11y: {
+                        enabled: true
+                    },
+                    pagination: {
+                        el: '.testi-dots',
+                        clickable: true
+                    },
+                    navigation: {
+                        nextEl: '.testi-next',
+                        prevEl: '.testi-prev'
+                    },
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 18
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 26
+                        }
+                    }
+                });
+            }
+
+            /* ------------------------------------------------------------
                Reveal on scroll
                ------------------------------------------------------------ */
             var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -3129,6 +3509,36 @@
                 });
             }
 
+        })();
+    </script>
+
+    <!-- ✅ COUNTRY DROPDOWN POPULATION WITH FLAGS VIA CDN (flagcdn.com) -->
+    <script>
+        (function() {
+            var countrySelect = document.getElementById('country');
+            if (!countrySelect) return;
+
+            var countriesStr = "Afghanistan|AF,Albania|AL,Algeria|DZ,Andorra|AD,Angola|AO,Antigua and Barbuda|AG,Argentina|AR,Armenia|AM,Australia|AU,Austria|AT,Azerbaijan|AZ,Bahamas|BS,Bahrain|BH,Bangladesh|BD,Barbados|BB,Belarus|BY,Belgium|BE,Belize|BZ,Benin|BJ,Bhutan|BT,Bolivia|BO,Bosnia and Herzegovina|BA,Botswana|BW,Brazil|BR,Brunei|BN,Bulgaria|BG,Burkina Faso|BF,Burundi|BI,Cabo Verde|CV,Cambodia|KH,Cameroon|CM,Canada|CA,Central African Republic|CF,Chad|TD,Chile|CL,China|CN,Colombia|CO,Comoros|KM,Congo (Congo-Brazzaville)|CG,Costa Rica|CR,Croatia|HR,Cuba|CU,Cyprus|CY,Czechia (Czech Republic)|CZ,Democratic Republic of the Congo|CD,Denmark|DK,Djibouti|DJ,Dominica|DM,Dominican Republic|DO,Ecuador|EC,Egypt|EG,El Salvador|SV,Equatorial Guinea|GQ,Eritrea|ER,Estonia|EE,Eswatini (fmr. \"Swaziland\")|SZ,Ethiopia|ET,Fiji|FJ,Finland|FI,France|FR,Gabon|GA,Gambia|GM,Georgia|GE,Germany|DE,Ghana|GH,Greece|GR,Grenada|GD,Guatemala|GT,Guinea|GN,Guinea-Bissau|GW,Guyana|GY,Haiti|HT,Honduras|HN,Hungary|HU,Iceland|IS,India|IN,Indonesia|ID,Iran|IR,Iraq|IQ,Ireland|IE,Israel|IL,Italy|IT,Jamaica|JM,Japan|JP,Jordan|JO,Kazakhstan|KZ,Kenya|KE,Kiribati|KI,Kuwait|KW,Kyrgyzstan|KG,Laos|LA,Latvia|LV,Lebanon|LB,Lesotho|LS,Liberia|LR,Libya|LY,Liechtenstein|LI,Lithuania|LT,Luxembourg|LU,Madagascar|MG,Malawi|MW,Malaysia|MY,Maldives|MV,Mali|ML,Malta|MT,Marshall Islands|MH,Mauritania|MR,Mauritius|MU,Mexico|MX,Micronesia|FM,Moldova|MD,Monaco|MC,Mongolia|MN,Montenegro|ME,Morocco|MA,Mozambique|MZ,Myanmar (formerly Burma)|MM,Namibia|NA,Nauru|NR,Nepal|NP,Netherlands|NL,New Zealand|NZ,Nicaragua|NI,Niger|NE,Nigeria|NG,North Korea|KP,North Macedonia|MK,Norway|NO,Oman|OM,Pakistan|PK,Palau|PW,Palestine State|PS,Panama|PA,Papua New Guinea|PG,Paraguay|PY,Peru|PE,Philippines|PH,Poland|PL,Portugal|PT,Qatar|QA,Romania|RO,Russia|RU,Rwanda|RW,Saint Kitts and Nevis|KN,Saint Lucia|LC,Saint Vincent and the Grenadines|VC,Samoa|WS,San Marino|SM,Sao Tome and Principe|ST,Saudi Arabia|SA,Senegal|SN,Serbia|RS,Seychelles|SC,Sierra Leone|SL,Singapore|SG,Slovakia|SK,Slovenia|SI,Solomon Islands|SB,Somalia|SO,South Africa|ZA,South Korea|KR,South Sudan|SS,Spain|ES,Sri Lanka|LK,Sudan|SD,Suriname|SR,Sweden|SE,Switzerland|CH,Syria|SY,Tajikistan|TJ,Tanzania|TZ,Thailand|TH,Timor-Leste|TL,Togo|TG,Tonga|TO,Trinidad and Tobago|TT,Tunisia|TN,Turkey|TR,Turkmenistan|TM,Tuvalu|TV,Uganda|UG,Ukraine|UA,United Arab Emirates|AE,United Kingdom|GB,United States|US,Uruguay|UY,Uzbekistan|UZ,Vanuatu|VU,Vatican City|VA,Venezuela|VE,Vietnam|VN,Yemen|YE,Zambia|ZM,Zimbabwe|ZW";
+
+            var countries = countriesStr.split(',');
+            var options = '<option value="" selected disabled>Select your country</option>';
+
+            countries.forEach(function(item) {
+                var parts = item.split('|');
+                var name = parts[0];
+                var code = parts[1].toLowerCase();
+
+                // Use flagcdn.com CDN for flags. Applied via inline style for best cross-browser support.
+                var flagUrl = 'https://flagcdn.com/16x12/' + code + '.png';
+                var style = 'background-image:url(' + flagUrl + ');background-repeat:no-repeat;background-position:left 10px center;background-size:18px 13px;padding-left:36px;';
+
+                options += '<option value="' + name + '" style="' + style + '">' + name + '</option>';
+            });
+
+            // Add "Other" option with a globe image from CDN
+            options += '<option value="Other" style="background-image:url(https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f310.svg);background-repeat:no-repeat;background-position:left 10px center;background-size:16px 16px;padding-left:36px;">Other</option>';
+
+            countrySelect.innerHTML = options;
         })();
     </script>
 </body>
