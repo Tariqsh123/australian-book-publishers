@@ -2610,6 +2610,241 @@
         </section>
 
         <!-- ==========================================================
+     WHERE WILL YOUR BOOK BE PUBLISHED? — SECTION
+     ========================================================== -->
+        <section class="pub-section">
+            <div class="pub-wrap">
+
+                <h2 class="pub-heading">Where Will Your Book Be Published?</h2>
+
+                <div class="pub-grid">
+
+                    <!-- Amazon Kindle -->
+                    <div class="pub-card">
+                        <p class="pub-text">Reach millions of readers worldwide on the largest online bookstore. Your book sits alongside bestsellers and new releases.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/amazon-kindle.png" alt="Amazon Kindle" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Booktopia -->
+                    <div class="pub-card">
+                        <p class="pub-text">Australia’s leading online bookstore connects you with local readers. A trusted destination for book lovers nationwide.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/Booktopia-logo.png" alt="Booktopia" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- IngramSpark -->
+                    <div class="pub-card">
+                        <p class="pub-text">Global print and digital distribution to bookstores, libraries and retailers. The industry standard for independent authors.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/IngramSpark.jpg" alt="IngramSpark" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Draft2Digital -->
+                    <div class="pub-card">
+                        <p class="pub-text">Easy distribution to multiple ebook retailers and libraries. A smart way to broaden your reach without the hassle.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/d2d-logo.png" alt="Draft2Digital" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Lulu -->
+                    <div class="pub-card">
+                        <p class="pub-text">Print-on-demand and global distribution for independent authors. Quality printing with no upfront inventory costs.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/Lulu-logo.png" alt="Lulu" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Google Books -->
+                    <div class="pub-card">
+                        <p class="pub-text">Get your book discovered across Google’s vast search and shopping network. Perfect for reaching readers actively looking for new titles.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/google-books.webp" alt="Google Books" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Kobo -->
+                    <div class="pub-card">
+                        <p class="pub-text">Reach avid readers in over 190 countries on Rakuten Kobo. A favourite platform for ebook enthusiasts worldwide.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/kobo.png" alt="Kobo" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Apple Books -->
+                    <div class="pub-card">
+                        <p class="pub-text">Put your book in front of Apple’s massive customer base. A premium storefront for readers on iPhone, iPad and Mac.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/apple-books.jpg" alt="Apple Books" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- PublishDrive -->
+                    <div class="pub-card">
+                        <p class="pub-text">Smart distribution to over 400 stores and libraries worldwide. One dashboard to manage your global ebook sales.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/publishdrive-logo.png" alt="PublishDrive" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Scribd -->
+                    <div class="pub-card">
+                        <p class="pub-text">Join a subscription service with millions of active readers. Get your book in front of a loyal, engaged audience.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/scribd-logo.png" alt="Scribd" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- OverDrive -->
+                    <div class="pub-card">
+                        <p class="pub-text">Connect with libraries and schools to reach new audiences. A powerful way to get your book into the hands of readers everywhere.</p>
+                        <div class="pub-logo">
+                            <img src="https://selfpublishingaustralia.com/images/overdrive.png" alt="OverDrive" loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <style>
+            /* ==========================================================
+   WHERE WILL YOUR BOOK BE PUBLISHED? — STYLES
+   ========================================================== */
+            
+            .pub-section {
+                background: #F7F8FA;
+                /* light off-white, matches site */
+                padding-block: clamp(64px, 8vw, 110px);
+            }
+            
+            .pub-wrap {
+                width: 100%;
+                max-width: 1280px;
+                margin: 0 auto;
+                padding-inline: clamp(20px, 4vw, 44px);
+            }
+            
+            .pub-heading {
+                font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                font-weight: 700;
+                color: #122942;
+                font-size: 50px;
+                line-height: 1.18;
+                letter-spacing: -0.025em;
+                margin: 0 0 clamp(36px, 5vw, 56px);
+                text-align: left;
+            }
+            /* ---------- Grid of cards ---------- */
+            
+            .pub-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .pub-card {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: clamp(24px, 4vw, 48px);
+                background: #FFFFFF;
+                border: 1px solid #E5E9EE;
+                /* light border */
+                border-radius: 10px;
+                padding: 22px 28px;
+                box-shadow: 0 2px 8px rgba(18, 41, 66, 0.04);
+                transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+            }
+            
+            .pub-card:hover {
+                border-color: #0094CE;
+                /* accent blue */
+                box-shadow: 0 12px 28px -12px rgba(0, 148, 206, 0.18);
+                transform: translateY(-2px);
+            }
+            /* ---------- Text (left) ---------- */
+            
+            .pub-text {
+                font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.65;
+                color: #3E4B59;
+                margin: 0;
+                max-width: 62ch;
+                flex: 1 1 auto;
+            }
+            /* ---------- Logo (right) ---------- */
+            
+            .pub-logo {
+                flex: 0 0 auto;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            
+            .pub-logo img {
+                max-width: 100%;
+                height: auto;
+                max-height: 50px;
+                width: auto;
+                object-fit: contain;
+                display: block;
+                filter: grayscale(0.15);
+                transition: filter 0.25s ease, transform 0.25s ease;
+            }
+            
+            .pub-card:hover .pub-logo img {
+                filter: grayscale(0);
+                transform: scale(1.03);
+            }
+            /* ---------- Responsive ---------- */
+            
+            @media (max-width: 760px) {
+                .pub-heading {
+                    font-size: 40px;
+                }
+                .pub-card {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 14px;
+                    padding: 20px 20px;
+                }
+                .pub-text {
+                    font-size: 13px;
+                    max-width: 100%;
+                }
+                .pub-logo {
+                    width: 130px;
+                    justify-content: flex-start;
+                }
+                .pub-logo img {
+                    max-height: 42px;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .pub-card {
+                    padding: 18px 18px;
+                }
+                .pub-logo {
+                    width: 110px;
+                }
+                .pub-logo img {
+                    max-height: 36px;
+                }
+            }
+        </style>
+
+
+
+
+        <!-- ==========================================================
        EDITORIAL STATEMENT — CENTERED
        ========================================================== -->
         <section class="statement-sec">
