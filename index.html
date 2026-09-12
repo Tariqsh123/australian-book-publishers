@@ -59,9 +59,7 @@
    2. RESET & BASE
    ============================================================ */
         
-        *,
-        *::before,
-        *::after {
+        * {
             box-sizing: border-box
         }
         
@@ -207,7 +205,7 @@
    ============================================================ */
         
         .h2 {
-            font-size: clamp(34px, 3.4vw, 2.7rem);
+            font-size: 50px;
             line-height: 1.18;
             letter-spacing: -.025em;
             font-weight: 700;
@@ -228,14 +226,6 @@
             text-transform: uppercase;
             color: var(--bright);
             margin: 0 0 22px;
-        }
-        
-        .eyebrow::before {
-            content: "";
-            width: 32px;
-            height: 2px;
-            background: var(--red);
-            flex: none
         }
         
         .eyebrow--light {
@@ -271,7 +261,7 @@
         
         .statement {
             font-family: var(--serif);
-            font-size: clamp(1.9rem, 4.6vw, 3.6rem);
+            font-size: 50px !important;
             line-height: 1.12;
             letter-spacing: -.025em;
             font-weight: 700;
@@ -285,14 +275,6 @@
             font-weight: 400;
             color: rgba(255, 255, 255);
         }
-        
-        .rule-red {
-            width: 64px;
-            height: 2px;
-            background: var(--red);
-            border: 0;
-            margin: 0 0 34px
-        }
         /* ============================================================
    5. BUTTONS & LINKS
    ============================================================ */
@@ -304,7 +286,7 @@
             gap: .65rem;
             font-family: var(--sans);
             font-weight: 700;
-            font-size: .855rem;
+            font-size: medium;
             letter-spacing: .015em;
             padding: 1.02rem 1.75rem;
             border-radius: 4px;
@@ -365,7 +347,7 @@
         
         .btn--sm {
             padding: .8rem 1.2rem;
-            font-size: .765rem
+            font-size: medium
         }
         
         .link-arrow {
@@ -452,7 +434,7 @@
         }
         
         .nav-desktop a {
-            font-size: .855rem;
+            font-size: medium;
             font-weight: 600;
             color: var(--ink);
             padding: 6px 0;
@@ -576,11 +558,14 @@
         }
         
         .hero-copy {
-            max-width: 660px
+            max-width: 660px;
+            align-self: flex-start;
+            position: sticky;
+            top: 80px;
         }
         
         .hero h1 {
-            font-size: clamp(2.4rem, 5vw, 3.9rem);
+            font-size: 50px;
             line-height: 1.08;
             letter-spacing: -.03em;
             font-weight: 800;
@@ -600,7 +585,7 @@
             font-family: var(--sans);
             font-style: normal;
             font-weight: 500;
-            font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+            font-size: medium;
             line-height: 1.5;
             color: var(--bright);
             margin: 0 0 28px;
@@ -632,18 +617,7 @@
         
         .hero-media {
             position: relative;
-            padding-left: 26px
-        }
-        
-        .hero-media::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 8%;
-            width: 2px;
-            height: 56%;
-            background: var(--red);
-            opacity: .85;
+            padding-left: 0px
         }
         
         .frame {
@@ -854,10 +828,6 @@
             text-align: center;
             position: relative;
             z-index: 1;
-        }
-        
-        .statement-inner .rule-red {
-            margin: 0 auto 36px;
         }
         
         .statement-sub {
@@ -1844,18 +1814,6 @@
             overflow: hidden;
         }
         
-        .final-sec::after {
-            content: "";
-            position: absolute;
-            left: -180px;
-            bottom: -200px;
-            width: 520px;
-            height: 520px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, 0) 70%);
-            pointer-events: none;
-        }
-        
         .final-grid {
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -1881,7 +1839,7 @@
         }
         
         .final-sec h2 .accent {
-            color: #B3E5FC
+            color: #122942
         }
         
         .final-copy p {
@@ -1940,7 +1898,7 @@
         .form-intro {
             font-family: var(--sans);
             font-weight: 800;
-            font-size: 1rem;
+            font-size: medium;
             color: var(--blue);
             margin: 0 0 22px;
             letter-spacing: -.005em;
@@ -1958,7 +1916,7 @@
         
         .field label {
             display: block;
-            font-size: .72rem;
+            font-size: medium;
             font-weight: 800;
             letter-spacing: .11em;
             text-transform: uppercase;
@@ -2045,6 +2003,7 @@
         
         .cta-form .btn {
             width: 100%;
+            font-size: medium;
             margin-top: 10px;
         }
         
@@ -2247,8 +2206,11 @@
                 max-width: none
             }
             .hero-media {
-                padding-left: 20px;
+                padding-left: 0px;
                 max-width: 620px
+            }
+            .field label {
+                font-size: small !important;
             }
             .hero-media-main {
                 aspect-ratio: 16/12;
@@ -2315,6 +2277,10 @@
             body {
                 font-size: 16px
             }
+            .hero-copy {
+                position: relative;
+                top: 0;
+            }
             .hero-features {
                 grid-template-columns: 1fr 1fr
             }
@@ -2380,19 +2346,19 @@
         
         @media (max-width:520px) {
             .hero h1 {
-                font-size: 50px
+                font-size: 40px
             }
             .hero-sub {
                 max-width: 100%;
             }
             .statement {
-                font-size: 40px
+                font-size: 40px !important
             }
             .red-sec h2 {
-                font-size: 32px;
+                font-size: 40px;
             }
             .final-sec h2 {
-                font-size: 30px;
+                font-size: 40px;
             }
             .process-statement {
                 font-size: 28px;
@@ -2431,9 +2397,7 @@
             html {
                 scroll-behavior: auto
             }
-            *,
-            *::before,
-            *::after {
+            * {
                 animation-duration: .001ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: .001ms !important;
@@ -2446,6 +2410,21 @@
         
         section {
             padding-block: clamp(40px, 60vw, 60px) !important;
+        }
+        
+        p,
+        li,
+        a {
+            font-size: medium !important;
+        }
+        
+        @media(max-width: 600px) {
+            .btn,
+            p,
+            li,
+            a {
+                font-size: small !important;
+            }
         }
     </style>
 </head>
@@ -2500,7 +2479,6 @@
         <div class="m-cta">
             <a href="#contact" class="btn btn--primary">Get Your Free Manuscript Assessment</a>
         </div>
-        <p class="m-note">No pressure. Straight answers. Your book stays yours.</p>
     </div>
 
     <main id="main">
@@ -2524,41 +2502,79 @@
 
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn--primary">Get Your Free Manuscript Assessment</a>
-                        <a href="#services" class="link-arrow">Explore Our Services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
 
-                    <p class="hero-note">No pressure. Straight answers. Your book stays yours.</p>
                 </div>
 
                 <div class="hero-media">
-                    <figure class="frame hero-media-main" style="margin:0">
-                        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80" alt="An Australian author reviewing a printed book alongside manuscript pages at a desk" fetchpriority="high" decoding="async" width="1200" height="1500">
-                    </figure>
+                    <div class="final-form-wrap reveal" data-delay="1">
+                        <form class="cta-form" action="#" method="post" enctype="multipart/form-data" novalidate>
+                            <p class="form-intro">Fill out the form, and we’ll get back to you:</p>
 
-                    <!-- <div class="hero-label">From manuscript to published book</div> -->
+                            <div class="form-row field">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Your full name" autocomplete="name" required>
+                            </div>
+
+                            <div class="form-row form-row--split">
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                                </div>
+                                <div class="field">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+61 000 000 000" autocomplete="tel">
+                                </div>
+                            </div>
+
+                            <!-- ✅ COUNTRY DROPDOWN WITH FLAGS (populated by JS, flags via flagcdn.com) -->
+                            <div class="form-row field">
+                                <label for="country">Country</label>
+                                <select id="country" name="country">
+                                <option value="" selected disabled>Select your country</option>
+                            </select>
+                            </div>
+
+                            <div class="form-row field">
+                                <label for="genre">Select Genre</label>
+                                <select id="genre" name="genre">
+                <option value="" selected disabled>Choose a genre</option>
+                <option>Fiction</option>
+                <option>Non-Fiction</option>
+                <option>Memoir / Biography</option>
+                <option>Children's / YA</option>
+                <option>Business / Self-Help</option>
+                <option>Poetry</option>
+                <option>Other</option>
+              </select>
+                            </div>
+
+                            <!-- ✅ BOOK TITLE -->
+                            <div class="form-row field">
+                                <label for="bookTitle">Book Title</label>
+                                <input type="text" id="bookTitle" name="bookTitle" placeholder="Working title of your book">
+                            </div>
+
+                            <!-- ✅ ATTACHMENT / MANUSCRIPT -->
+                            <div class="form-row field">
+                                <label for="manuscript">Attachment (Manuscript)</label>
+                                <input type="file" id="manuscript" name="manuscript" accept=".doc,.docx,.pdf,.rtf,.txt">
+                            </div>
+
+                            <div class="form-row field">
+                                <label for="details">Details</label>
+                                <textarea id="details" name="details" placeholder="Tell us a bit about your book — word count, genre, and what you'd like help with."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary">Submit Request</button>
+
+                            <p class="form-foot">We reply within one business day. Your details stay private.</p>
+                        </form>
+                    </div>
                 </div>
             </div>
 
-            <div class="wrap">
-                <ul class="hero-features reveal">
-                    <li class="hf-card hf-card--blue">
-                        <span class="hf-icon"><i class="fa-solid fa-user-pen" aria-hidden="true"></i></span>
-                        <span>Author-Focused Support</span>
-                    </li>
-                    <li class="hf-card hf-card--red">
-                        <span class="hf-icon"><i class="fa-solid fa-tags" aria-hidden="true"></i></span>
-                        <span>Transparent Pricing</span>
-                    </li>
-                    <li class="hf-card hf-card--blue">
-                        <span class="hf-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
-                        <span>Full Rights &amp; Royalty Retention</span>
-                    </li>
-                    <li class="hf-card hf-card--red">
-                        <span class="hf-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span>
-                        <span>Real Editors &amp; Designers</span>
-                    </li>
-                </ul>
-            </div>
+
         </section>
 
         <!-- ==========================================================
@@ -2598,7 +2614,6 @@
        ========================================================== -->
         <section class="statement-sec">
             <div class="wrap statement-inner">
-                <hr class="rule-red">
                 <p class="statement">Your book is personal.<br><em>The publishing process shouldn't be.</em></p>
                 <p class="statement-sub">From the first read-through to the day your book goes live, we keep things simple. You'll always know where your book is and what's happening next.</p>
             </div>
@@ -2688,7 +2703,7 @@
             <div class="wrap support-grid">
                 <div class="support-copy reveal">
                     <!-- <p class="eyebrow">Author Support</p> -->
-                    <h2 class="h2 h2--wide">Self Publishing Support for New and Experienced Authors</h2>
+                    <h2 class="h2 h2--wide">Self Publishing Support for <span style="color: var(--red);"> New</span> and <span style="color: var(--red);"> Experienced Authors</span></h2>
                     <p>Self-publishing is a lot of moving parts. Editing, formatting, ISBNs, distribution, print files — none of it is hard on its own, but it adds up fast. We make each step make sense.</p>
                     <p>If you're publishing your first book, we'll explain the process without jargon and won't make you feel silly for asking questions. If you've done this before, we're the production team you call when you need specialists for the next
                         stage.
@@ -2834,7 +2849,7 @@
             <div class="wrap">
                 <div class="trust-head reveal">
                     <!-- <p class="eyebrow eyebrow--light">Why Authors Work With Us</p> -->
-                    <h2 class="h2 h2--wide">Why Choose Australian Book Publishers?</h2>
+                    <h2 class="h2 h2--wide">Why Choose <span style="color: #122942;"> Australian </span>Book Publishers?</h2>
                     <p class="lede">Picking a publishing partner is a real decision. Before you hand over a manuscript and your money, you should know who you're dealing with, what you're getting, and what happens to your rights.</p>
                 </div>
 
