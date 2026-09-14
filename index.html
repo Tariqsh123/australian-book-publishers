@@ -1804,7 +1804,7 @@
             margin: 0;
         }
         /* ============================================================
-   20. FINAL CTA + FORM
+   20. FINAL CTA + FORM (BLUE FORM BG)
    ============================================================ */
         
         .final-sec {
@@ -1886,10 +1886,10 @@
             text-transform: uppercase;
             font-weight: 700;
         }
-        /* ---- Form ---- */
+        /* ---- Form (BLUE BACKGROUND) ---- */
         
         .cta-form {
-            background: #fff;
+            background: var(--blue);
             border-radius: var(--r);
             padding: clamp(26px, 3vw, 40px);
             box-shadow: 0 44px 90px -44px rgba(0, 0, 0, .6);
@@ -1899,7 +1899,7 @@
             font-family: var(--sans);
             font-weight: 800;
             font-size: medium;
-            color: var(--blue);
+            color: #fff;
             margin: 0 0 22px;
             letter-spacing: -.005em;
         }
@@ -1920,7 +1920,7 @@
             font-weight: 800;
             letter-spacing: .11em;
             text-transform: uppercase;
-            color: var(--blue);
+            color: #fff;
             margin-bottom: 7px;
         }
         
@@ -2007,10 +2007,19 @@
             margin-top: 10px;
         }
         
+        .cta-form .btn--primary {
+            background: var(--red);
+            color: #fff;
+        }
+        
+        .cta-form .btn--primary:hover {
+            background: var(--deep-red);
+        }
+        
         .form-foot {
             margin-top: 14px;
             font-size: .76rem;
-            color: var(--muted);
+            color: rgba(255, 255, 255, .78);
             text-align: center;
             letter-spacing: .01em;
         }
@@ -2171,7 +2180,152 @@
             transition-delay: .24s
         }
         /* ============================================================
-   23. RESPONSIVE
+   23. PUBLISHED PLATFORMS SECTION — 3 PER ROW CARDS, NO HOVER
+   ============================================================ */
+        
+        .pub-section {
+            background: #F7F8FA;
+            padding-block: clamp(72px, 9vw, 120px);
+        }
+        
+        .pub-wrap {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-inline: clamp(20px, 4vw, 44px);
+        }
+        
+        .pub-heading {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            color: #122942;
+            font-size: 50px;
+            line-height: 1.18;
+            letter-spacing: -0.025em;
+            margin: 0 0 clamp(40px, 5.5vw, 64px);
+            text-align: left;
+        }
+        
+        .pub-subheading {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 17px;
+            line-height: 1.75;
+            color: #3E4B59;
+            max-width: 62ch;
+            margin: -32px 0 48px;
+        }
+        /* ---------- Grid of cards ---------- */
+        
+        .pub-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+        
+        .pub-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 26px;
+            background: #FFFFFF;
+            border: 1px solid #E5E9EE;
+            border-radius: 10px;
+            padding: 28px 26px;
+            box-shadow: 0 2px 8px rgba(18, 41, 66, 0.04);
+            transition: none;
+        }
+        /* NO hover effect — explicitly override */
+        
+        .pub-card:hover {
+            border-color: #E5E9EE;
+            box-shadow: 0 2px 8px rgba(18, 41, 66, 0.04);
+            transform: none;
+        }
+        /* ---------- Text (top of card) ---------- */
+        
+        .pub-text {
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #3E4B59;
+            margin: 0;
+            max-width: 100%;
+            flex: 0 0 auto;
+        }
+        /* ---------- Logo (bottom of card) ---------- */
+        
+        .pub-logo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: auto;
+            padding-top: 6px;
+        }
+        
+        .pub-logo img {
+            max-width: 100%;
+            height: auto;
+            max-height: 52px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            filter: grayscale(0.15);
+            transition: none;
+        }
+        
+        .pub-card:hover .pub-logo img {
+            filter: grayscale(0.15);
+            transform: none;
+        }
+        /* ---------- Responsive ---------- */
+        
+        @media (max-width: 1024px) {
+            .pub-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        
+        @media (max-width: 760px) {
+            .pub-heading {
+                font-size: 40px;
+            }
+            .pub-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .pub-card {
+                padding: 22px 20px;
+                gap: 18px;
+            }
+            .pub-text {
+                font-size: 14px;
+                max-width: 100%;
+            }
+            .pub-logo {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .pub-logo img {
+                max-height: 44px;
+            }
+            .pub-subheading {
+                font-size: 15px;
+                margin: -20px 0 34px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pub-card {
+                padding: 20px 18px;
+            }
+            .pub-logo img {
+                max-height: 38px;
+            }
+        }
+        /* ============================================================
+   24. RESPONSIVE
    ============================================================ */
         
         @media (max-width:1180px) {
@@ -2390,7 +2544,7 @@
             }
         }
         /* ============================================================
-   24. MOTION PREFERENCES
+   25. MOTION PREFERENCES
    ============================================================ */
         
         @media (prefers-reduced-motion: reduce) {
@@ -2415,7 +2569,7 @@
         p,
         li,
         a {
-            font-size: medium !important;
+            font-size: large !important;
         }
         
         @media(max-width: 600px) {
@@ -2423,7 +2577,7 @@
             p,
             li,
             a {
-                font-size: small !important;
+                font-size: medium !important;
             }
         }
     </style>
@@ -2489,10 +2643,8 @@
         <section class="hero" id="home">
             <div class="wrap hero-grid">
                 <div class="hero-copy">
-                    <!-- <p class="eyebrow">Australian Book Publishers</p> -->
                     <h1>
                         <span class="hero-line">Your Book.</span>
-                        <!-- <span class="hero-line">Your Story.</span> -->
                         <span class="hero-line"><em>Your Publishing Journey.</em></span>
                     </h1>
 
@@ -2527,7 +2679,6 @@
                                 </div>
                             </div>
 
-                            <!-- ✅ COUNTRY DROPDOWN WITH FLAGS (populated by JS, flags via flagcdn.com) -->
                             <div class="form-row field">
                                 <label for="country">Country</label>
                                 <select id="country" name="country">
@@ -2549,13 +2700,11 @@
               </select>
                             </div>
 
-                            <!-- ✅ BOOK TITLE -->
                             <div class="form-row field">
                                 <label for="bookTitle">Book Title</label>
                                 <input type="text" id="bookTitle" name="bookTitle" placeholder="Working title of your book">
                             </div>
 
-                            <!-- ✅ ATTACHMENT / MANUSCRIPT -->
                             <div class="form-row field">
                                 <label for="manuscript">Attachment (Manuscript)</label>
                                 <input type="file" id="manuscript" name="manuscript" accept=".doc,.docx,.pdf,.rtf,.txt">
@@ -2583,7 +2732,6 @@
         <section class="sec sec--white" id="about">
             <div class="wrap who-grid">
                 <div class="who-copy reveal">
-                    <!-- <p class="eyebrow">About Us</p> -->
                     <h2 class="h2">Who We Are</h2>
 
                     <p>We started this because too many Australian authors were being talked into things they didn't understand. Vanity presses, hidden fees, contracts that quietly took their rights. Our approach is simpler: figure out what your book actually
@@ -2616,6 +2764,7 @@
             <div class="pub-wrap">
 
                 <h2 class="pub-heading">Where Will Your Book Be Published?</h2>
+                <p class="pub-subheading">Distribute your book on the world's leading platforms — reach readers everywhere and get discovered across bookstores, libraries and online retailers.</p>
 
                 <div class="pub-grid">
 
@@ -2711,139 +2860,6 @@
             </div>
         </section>
 
-        <style>
-            /* ==========================================================
-   WHERE WILL YOUR BOOK BE PUBLISHED? — STYLES
-   ========================================================== */
-            
-            .pub-section {
-                background: #F7F8FA;
-                /* light off-white, matches site */
-                padding-block: clamp(64px, 8vw, 110px);
-            }
-            
-            .pub-wrap {
-                width: 100%;
-                max-width: 1280px;
-                margin: 0 auto;
-                padding-inline: clamp(20px, 4vw, 44px);
-            }
-            
-            .pub-heading {
-                font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                font-weight: 700;
-                color: #122942;
-                font-size: 50px;
-                line-height: 1.18;
-                letter-spacing: -0.025em;
-                margin: 0 0 clamp(36px, 5vw, 56px);
-                text-align: left;
-            }
-            /* ---------- Grid of cards ---------- */
-            
-            .pub-grid {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-            }
-            
-            .pub-card {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: clamp(24px, 4vw, 48px);
-                background: #FFFFFF;
-                border: 1px solid #E5E9EE;
-                /* light border */
-                border-radius: 10px;
-                padding: 22px 28px;
-                box-shadow: 0 2px 8px rgba(18, 41, 66, 0.04);
-                transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-            }
-            
-            .pub-card:hover {
-                border-color: #0094CE;
-                /* accent blue */
-                box-shadow: 0 12px 28px -12px rgba(0, 148, 206, 0.18);
-                transform: translateY(-2px);
-            }
-            /* ---------- Text (left) ---------- */
-            
-            .pub-text {
-                font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-                font-size: 16px;
-                line-height: 1.65;
-                color: #3E4B59;
-                margin: 0;
-                max-width: 62ch;
-                flex: 1 1 auto;
-            }
-            /* ---------- Logo (right) ---------- */
-            
-            .pub-logo {
-                flex: 0 0 auto;
-                width: 150px;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-            }
-            
-            .pub-logo img {
-                max-width: 100%;
-                height: auto;
-                max-height: 50px;
-                width: auto;
-                object-fit: contain;
-                display: block;
-                filter: grayscale(0.15);
-                transition: filter 0.25s ease, transform 0.25s ease;
-            }
-            
-            .pub-card:hover .pub-logo img {
-                filter: grayscale(0);
-                transform: scale(1.03);
-            }
-            /* ---------- Responsive ---------- */
-            
-            @media (max-width: 760px) {
-                .pub-heading {
-                    font-size: 40px;
-                }
-                .pub-card {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 14px;
-                    padding: 20px 20px;
-                }
-                .pub-text {
-                    font-size: 13px;
-                    max-width: 100%;
-                }
-                .pub-logo {
-                    width: 130px;
-                    justify-content: flex-start;
-                }
-                .pub-logo img {
-                    max-height: 42px;
-                }
-            }
-            
-            @media (max-width: 480px) {
-                .pub-card {
-                    padding: 18px 18px;
-                }
-                .pub-logo {
-                    width: 110px;
-                }
-                .pub-logo img {
-                    max-height: 36px;
-                }
-            }
-        </style>
-
-
-
-
         <!-- ==========================================================
        EDITORIAL STATEMENT — CENTERED
        ========================================================== -->
@@ -2861,7 +2877,6 @@
             <div class="wrap">
                 <div class="sec-head">
                     <div class="reveal">
-                        <!-- <p class="eyebrow">Services</p> -->
                         <h2 class="h2">Our <span class="accent">Services</span></h2>
                     </div>
                     <p class="sec-head__intro lede reveal" data-delay="1">Everything you need to get a finished manuscript into readers' hands — editing, design, formatting, ISBNs, distribution. You stay in charge of the decisions. We handle the work behind them.</p>
@@ -2937,7 +2952,6 @@
         <section class="sec sec--white">
             <div class="wrap support-grid">
                 <div class="support-copy reveal">
-                    <!-- <p class="eyebrow">Author Support</p> -->
                     <h2 class="h2 h2--wide">Self Publishing Support for <span style="color: var(--red);"> New</span> and <span style="color: var(--red);"> Experienced Authors</span></h2>
                     <p>Self-publishing is a lot of moving parts. Editing, formatting, ISBNs, distribution, print files — none of it is hard on its own, but it adds up fast. We make each step make sense.</p>
                     <p>If you're publishing your first book, we'll explain the process without jargon and won't make you feel silly for asking questions. If you've done this before, we're the production team you call when you need specialists for the next
@@ -2981,7 +2995,6 @@
         <section class="sec sec--white">
             <div class="wrap aus-grid">
                 <div class="aus-copy reveal">
-                    <!-- <p class="eyebrow">Australia-Wide</p> -->
                     <h2 class="h2 h2--wide">Australia-Wide Self Publishing Services</h2>
                     <p>We work with authors all over Australia — Sydney, Melbourne, Brisbane, Perth, Adelaide, the Gold Coast, and plenty of places in between. Everything can be done remotely, and it usually is. You'll get the same clear communication whether
                         you're in the middle of a city or six hours out of one.</p>
@@ -3008,7 +3021,6 @@
         <section class="process-sec" id="how-it-works">
             <div class="wrap">
                 <div class="process-head reveal">
-                    <!-- <p class="eyebrow eyebrow--light">How the Journey Works</p> -->
                     <p class="process-statement">From finished manuscript to published book.</p>
                 </div>
 
@@ -3053,7 +3065,6 @@
         <section class="sec sec--off" id="pricing">
             <div class="wrap pricing-grid">
                 <div class="pricing-copy reveal">
-                    <!-- <p class="eyebrow">Pricing</p> -->
                     <h2 class="h2 h2--wide">How Much Does Self Publishing Cost in <span class="accent">Australia?</span></h2>
                     <p>What you'll pay depends on your book — how long it is, how much editing it needs, whether you want print, ebook or both. There's no honest one-size price.</p>
                     <p>So instead of selling you a package padded with things you don't need, we look at your manuscript and tell you what it actually requires.</p>
@@ -3083,7 +3094,6 @@
         <section class="trust-sec">
             <div class="wrap">
                 <div class="trust-head reveal">
-                    <!-- <p class="eyebrow eyebrow--light">Why Authors Work With Us</p> -->
                     <h2 class="h2 h2--wide">Why Choose <span style="color: #122942;"> Australian </span>Book Publishers?</h2>
                     <p class="lede">Picking a publishing partner is a real decision. Before you hand over a manuscript and your money, you should know who you're dealing with, what you're getting, and what happens to your rights.</p>
                 </div>
@@ -3156,7 +3166,7 @@
             <div class="wrap">
                 <div class="testi-head">
                     <div class="reveal">
-                        <p class="eyebrow">Author Stories</p>
+                        <!-- <p class="eyebrow">Author Stories</p> -->
                         <h2 class="h2">What Australian Authors <span class="accent">Say About Us</span></h2>
                     </div>
                     <p class="lede reveal" data-delay="1">Real feedback from authors we've worked with — first-time writers, memoirists and business authors alike. No scripts, no stock quotes.</p>
@@ -3293,7 +3303,6 @@
             <div class="wrap">
                 <div class="faq-head">
                     <div class="reveal">
-                        <!-- <p class="eyebrow">FAQs</p> -->
                         <h2 class="h2">Frequently Asked <span class="accent">Questions</span></h2>
                     </div>
                     <p class="faq-intro lede reveal" data-delay="1">Straight answers to the questions authors actually ask about self-publishing, costs, rights and picking a publishing partner.</p>
@@ -3425,32 +3434,31 @@
                         <p class="form-intro">Fill out the form, and we’ll get back to you:</p>
 
                         <div class="form-row field">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Your full name" autocomplete="name" required>
+                            <label for="fullName2">Full Name</label>
+                            <input type="text" id="fullName2" name="fullName" placeholder="Your full name" autocomplete="name" required>
                         </div>
 
                         <div class="form-row form-row--split">
                             <div class="field">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                                <label for="email2">Email</label>
+                                <input type="email" id="email2" name="email" placeholder="you@example.com" autocomplete="email" required>
                             </div>
                             <div class="field">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+61 000 000 000" autocomplete="tel">
+                                <label for="phone2">Phone</label>
+                                <input type="tel" id="phone2" name="phone" placeholder="+61 000 000 000" autocomplete="tel">
                             </div>
                         </div>
 
-                        <!-- ✅ COUNTRY DROPDOWN WITH FLAGS (populated by JS, flags via flagcdn.com) -->
                         <div class="form-row field">
-                            <label for="country">Country</label>
-                            <select id="country" name="country">
+                            <label for="country2">Country</label>
+                            <select id="country2" name="country">
                                 <option value="" selected disabled>Select your country</option>
                             </select>
                         </div>
 
                         <div class="form-row field">
-                            <label for="genre">Select Genre</label>
-                            <select id="genre" name="genre">
+                            <label for="genre2">Select Genre</label>
+                            <select id="genre2" name="genre">
                 <option value="" selected disabled>Choose a genre</option>
                 <option>Fiction</option>
                 <option>Non-Fiction</option>
@@ -3462,21 +3470,19 @@
               </select>
                         </div>
 
-                        <!-- ✅ BOOK TITLE -->
                         <div class="form-row field">
-                            <label for="bookTitle">Book Title</label>
-                            <input type="text" id="bookTitle" name="bookTitle" placeholder="Working title of your book">
-                        </div>
-
-                        <!-- ✅ ATTACHMENT / MANUSCRIPT -->
-                        <div class="form-row field">
-                            <label for="manuscript">Attachment (Manuscript)</label>
-                            <input type="file" id="manuscript" name="manuscript" accept=".doc,.docx,.pdf,.rtf,.txt">
+                            <label for="bookTitle2">Book Title</label>
+                            <input type="text" id="bookTitle2" name="bookTitle" placeholder="Working title of your book">
                         </div>
 
                         <div class="form-row field">
-                            <label for="details">Details</label>
-                            <textarea id="details" name="details" placeholder="Tell us a bit about your book — word count, genre, and what you'd like help with."></textarea>
+                            <label for="manuscript2">Attachment (Manuscript)</label>
+                            <input type="file" id="manuscript2" name="manuscript" accept=".doc,.docx,.pdf,.rtf,.txt">
+                        </div>
+
+                        <div class="form-row field">
+                            <label for="details2">Details</label>
+                            <textarea id="details2" name="details" placeholder="Tell us a bit about your book — word count, genre, and what you'd like help with."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn--primary">Submit Request</button>
@@ -3569,9 +3575,7 @@
         (function() {
             'use strict';
 
-            /* ------------------------------------------------------------
-               Sticky header shadow on scroll
-               ------------------------------------------------------------ */
+            /* Sticky header shadow on scroll */
             var header = document.getElementById('siteHeader');
             var lastState = false;
 
@@ -3587,9 +3591,7 @@
             });
             onScroll();
 
-            /* ------------------------------------------------------------
-               Mobile navigation
-               ------------------------------------------------------------ */
+            /* Mobile navigation */
             var navToggle = document.getElementById('navToggle');
             var mobileNav = document.getElementById('mobileNav');
             var navIcon = navToggle.querySelector('i');
@@ -3636,9 +3638,25 @@
             });
 
             /* ------------------------------------------------------------
-               FAQ accordion
+               FAQ accordion — ONLY ONE OPEN AT A TIME
                ------------------------------------------------------------ */
             var faqItems = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
+
+            function closeFaqItem(item) {
+                item.classList.remove('is-open');
+                var b = item.querySelector('.faq-q');
+                var p = item.querySelector('.faq-a');
+                if (b) b.setAttribute('aria-expanded', 'false');
+                if (p) p.setAttribute('aria-hidden', 'true');
+            }
+
+            function openFaqItem(item) {
+                item.classList.add('is-open');
+                var b = item.querySelector('.faq-q');
+                var p = item.querySelector('.faq-a');
+                if (b) b.setAttribute('aria-expanded', 'true');
+                if (p) p.setAttribute('aria-hidden', 'false');
+            }
 
             faqItems.forEach(function(item) {
                 var button = item.querySelector('.faq-q');
@@ -3648,13 +3666,16 @@
                     var isOpen = item.classList.contains('is-open');
 
                     if (isOpen) {
-                        item.classList.remove('is-open');
-                        button.setAttribute('aria-expanded', 'false');
-                        panel.setAttribute('aria-hidden', 'true');
+                        closeFaqItem(item);
                     } else {
-                        item.classList.add('is-open');
-                        button.setAttribute('aria-expanded', 'true');
-                        panel.setAttribute('aria-hidden', 'false');
+                        // ✅ Close every other currently open item
+                        faqItems.forEach(function(otherItem) {
+                            if (otherItem !== item && otherItem.classList.contains('is-open')) {
+                                closeFaqItem(otherItem);
+                            }
+                        });
+
+                        openFaqItem(item);
                     }
                 });
 
@@ -3683,15 +3704,10 @@
 
             /* First item open on desktop, all closed on mobile */
             if (faqItems.length && window.matchMedia('(min-width: 761px)').matches) {
-                var first = faqItems[0];
-                first.classList.add('is-open');
-                first.querySelector('.faq-q').setAttribute('aria-expanded', 'true');
-                first.querySelector('.faq-a').setAttribute('aria-hidden', 'false');
+                openFaqItem(faqItems[0]);
             }
 
-            /* ------------------------------------------------------------
-               TESTIMONIALS SWIPER
-               ------------------------------------------------------------ */
+            /* TESTIMONIALS SWIPER */
             if (typeof Swiper !== 'undefined' && document.querySelector('.testi-swiper')) {
                 new Swiper('.testi-swiper', {
                     slidesPerView: 1,
@@ -3731,9 +3747,7 @@
                 });
             }
 
-            /* ------------------------------------------------------------
-               Reveal on scroll
-               ------------------------------------------------------------ */
+            /* Reveal on scroll */
             var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
 
@@ -3765,9 +3779,6 @@
     <!-- ✅ COUNTRY DROPDOWN POPULATION WITH FLAGS VIA CDN (flagcdn.com) -->
     <script>
         (function() {
-            var countrySelect = document.getElementById('country');
-            if (!countrySelect) return;
-
             var countriesStr = "Afghanistan|AF,Albania|AL,Algeria|DZ,Andorra|AD,Angola|AO,Antigua and Barbuda|AG,Argentina|AR,Armenia|AM,Australia|AU,Austria|AT,Azerbaijan|AZ,Bahamas|BS,Bahrain|BH,Bangladesh|BD,Barbados|BB,Belarus|BY,Belgium|BE,Belize|BZ,Benin|BJ,Bhutan|BT,Bolivia|BO,Bosnia and Herzegovina|BA,Botswana|BW,Brazil|BR,Brunei|BN,Bulgaria|BG,Burkina Faso|BF,Burundi|BI,Cabo Verde|CV,Cambodia|KH,Cameroon|CM,Canada|CA,Central African Republic|CF,Chad|TD,Chile|CL,China|CN,Colombia|CO,Comoros|KM,Congo (Congo-Brazzaville)|CG,Costa Rica|CR,Croatia|HR,Cuba|CU,Cyprus|CY,Czechia (Czech Republic)|CZ,Democratic Republic of the Congo|CD,Denmark|DK,Djibouti|DJ,Dominica|DM,Dominican Republic|DO,Ecuador|EC,Egypt|EG,El Salvador|SV,Equatorial Guinea|GQ,Eritrea|ER,Estonia|EE,Eswatini (fmr. \"Swaziland\")|SZ,Ethiopia|ET,Fiji|FJ,Finland|FI,France|FR,Gabon|GA,Gambia|GM,Georgia|GE,Germany|DE,Ghana|GH,Greece|GR,Grenada|GD,Guatemala|GT,Guinea|GN,Guinea-Bissau|GW,Guyana|GY,Haiti|HT,Honduras|HN,Hungary|HU,Iceland|IS,India|IN,Indonesia|ID,Iran|IR,Iraq|IQ,Ireland|IE,Israel|IL,Italy|IT,Jamaica|JM,Japan|JP,Jordan|JO,Kazakhstan|KZ,Kenya|KE,Kiribati|KI,Kuwait|KW,Kyrgyzstan|KG,Laos|LA,Latvia|LV,Lebanon|LB,Lesotho|LS,Liberia|LR,Libya|LY,Liechtenstein|LI,Lithuania|LT,Luxembourg|LU,Madagascar|MG,Malawi|MW,Malaysia|MY,Maldives|MV,Mali|ML,Malta|MT,Marshall Islands|MH,Mauritania|MR,Mauritius|MU,Mexico|MX,Micronesia|FM,Moldova|MD,Monaco|MC,Mongolia|MN,Montenegro|ME,Morocco|MA,Mozambique|MZ,Myanmar (formerly Burma)|MM,Namibia|NA,Nauru|NR,Nepal|NP,Netherlands|NL,New Zealand|NZ,Nicaragua|NI,Niger|NE,Nigeria|NG,North Korea|KP,North Macedonia|MK,Norway|NO,Oman|OM,Pakistan|PK,Palau|PW,Palestine State|PS,Panama|PA,Papua New Guinea|PG,Paraguay|PY,Peru|PE,Philippines|PH,Poland|PL,Portugal|PT,Qatar|QA,Romania|RO,Russia|RU,Rwanda|RW,Saint Kitts and Nevis|KN,Saint Lucia|LC,Saint Vincent and the Grenadines|VC,Samoa|WS,San Marino|SM,Sao Tome and Principe|ST,Saudi Arabia|SA,Senegal|SN,Serbia|RS,Seychelles|SC,Sierra Leone|SL,Singapore|SG,Slovakia|SK,Slovenia|SI,Solomon Islands|SB,Somalia|SO,South Africa|ZA,South Korea|KR,South Sudan|SS,Spain|ES,Sri Lanka|LK,Sudan|SD,Suriname|SR,Sweden|SE,Switzerland|CH,Syria|SY,Tajikistan|TJ,Tanzania|TZ,Thailand|TH,Timor-Leste|TL,Togo|TG,Tonga|TO,Trinidad and Tobago|TT,Tunisia|TN,Turkey|TR,Turkmenistan|TM,Tuvalu|TV,Uganda|UG,Ukraine|UA,United Arab Emirates|AE,United Kingdom|GB,United States|US,Uruguay|UY,Uzbekistan|UZ,Vanuatu|VU,Vatican City|VA,Venezuela|VE,Vietnam|VN,Yemen|YE,Zambia|ZM,Zimbabwe|ZW";
 
             var countries = countriesStr.split(',');
@@ -3778,17 +3789,19 @@
                 var name = parts[0];
                 var code = parts[1].toLowerCase();
 
-                // Use flagcdn.com CDN for flags. Applied via inline style for best cross-browser support.
                 var flagUrl = 'https://flagcdn.com/16x12/' + code + '.png';
                 var style = 'background-image:url(' + flagUrl + ');background-repeat:no-repeat;background-position:left 10px center;background-size:18px 13px;padding-left:36px;';
 
                 options += '<option value="' + name + '" style="' + style + '">' + name + '</option>';
             });
 
-            // Add "Other" option with a globe image from CDN
             options += '<option value="Other" style="background-image:url(https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f310.svg);background-repeat:no-repeat;background-position:left 10px center;background-size:16px 16px;padding-left:36px;">Other</option>';
 
-            countrySelect.innerHTML = options;
+            // Populate both country selects (hero + final form)
+            var selects = document.querySelectorAll('#country, #country2');
+            selects.forEach(function(sel) {
+                sel.innerHTML = options;
+            });
         })();
     </script>
 </body>
